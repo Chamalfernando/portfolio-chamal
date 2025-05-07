@@ -97,6 +97,12 @@ const Header = () => {
     };
   }, []);
 
+  const handleClick = () => {
+    navigate("/");
+    // Scroll to top after navigation
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header
       ref={headerRef}
@@ -108,7 +114,9 @@ const Header = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">Chamal Fernando</h1>
+        <h1 className="text-xl font-bold" onClick={handleClick}>
+          Chamal Fernando
+        </h1>
         <nav className="space-x-4">
           <a
             href="#about"
