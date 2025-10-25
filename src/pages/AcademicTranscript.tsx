@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Home, ShieldAlert, ArrowLeft } from 'lucide-react';
@@ -13,14 +13,8 @@ const AcademicTranscript = () => {
       return false;
     };
 
-    // Disable keyboard shortcuts (Ctrl+P for print, PrintScreen, etc.)
+    // Disable keyboard shortcuts (Ctrl+P for print, Ctrl+S for save)
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Disable Print Screen
-      if (e.key === 'PrintScreen') {
-        e.preventDefault();
-        return false;
-      }
-      
       // Disable Ctrl+P (Print)
       if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
         e.preventDefault();
@@ -32,9 +26,21 @@ const AcademicTranscript = () => {
         e.preventDefault();
         return false;
       }
+
+      // Disable F11,F12 (Dev Tools / Fullscreen)
+      if (e.key === 'F12' || e.key === 'F11') {
+        e.preventDefault();
+        return false;
+      }
+
+      // Disable Print Screen
+      if (e.key.toLowerCase() === 'printscreen') {
+        e.preventDefault();
+        return false;
+      }
     };
 
-    // Add CSS to prevent selection and add watermark
+    // Add CSS to prevent selection
     document.body.style.userSelect = 'none';
     document.body.style.webkitUserSelect = 'none';
     
@@ -63,10 +69,20 @@ const AcademicTranscript = () => {
 
   return (
     <main className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      {/* Security Watermark */}
-      <div className="fixed inset-0 pointer-events-none z-40 opacity-5">
+      {/* Multiple Security Watermarks - These will appear in any screenshot */}
+      <div className="fixed inset-0 pointer-events-none z-40 opacity-10">
         <div className="absolute inset-0 flex items-center justify-center transform rotate-[-45deg]">
-          <p className="text-9xl font-bold text-foreground">CONFIDENTIAL</p>
+          <p className="text-9xl font-bold text-destructive">CONFIDENTIAL</p>
+        </div>
+      </div>
+      
+      {/* Additional watermark layer */}
+      <div className="fixed inset-0 pointer-events-none z-40 opacity-5">
+        <div className="absolute top-1/4 left-1/4 transform rotate-[-30deg]">
+          <p className="text-6xl font-bold text-destructive">PROTECTED DOCUMENT</p>
+        </div>
+        <div className="absolute bottom-1/4 right-1/4 transform rotate-[30deg]">
+          <p className="text-6xl font-bold text-destructive">DO NOT COPY</p>
         </div>
       </div>
 
@@ -97,7 +113,7 @@ const AcademicTranscript = () => {
           >
             <div className="inline-flex items-center gap-3 bg-destructive/10 text-destructive px-6 py-3 rounded-full mb-6 border border-destructive/30">
               <ShieldAlert className="w-5 h-5" />
-              <span className="font-semibold">Protected Document - No Screenshots or Downloads</span>
+              <span className="font-semibold">Protected Document - No Downloads</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
