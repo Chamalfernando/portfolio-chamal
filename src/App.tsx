@@ -1,63 +1,35 @@
-// import "./App.css";
-import React from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Educations from "./components/Education";
-// import Blogs from "./components/Blogs";
-import ProjectExplain from "./components/ProjectExplain";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import WExperience from "./components/WExperience";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import ProjectDetail from "./pages/ProjectDetail";
+import WorkExperience from "./pages/WorkExperience";
+import AcademicTranscript from "./pages/AcademicTranscript";
+import NotFound from "./pages/NotFound";
+import ScrollToTopOnNavigate from "./components/ScrollToTopOnNavigate";
 
-function App() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-  return (
-    // <>
-    //   <Header />
-    //   <Hero />
-    //   <About />
-    //   <Skills />
-    //   <Educations />
-    //   {/* <Blogs /> */}
-    //   <Projects />
-    //   <Contact />
-    //   <Footer />
-    // </>
-    <Router>
-      {/* <div className="bg-gray-50 min-h-screen flex flex-col"> */}
-      <Header />
-      <Routes>
-        {/* Main Home Page */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              {/* <About /> */}
-              <WExperience />
-              <Skills />
-              <Educations />
-              <Projects />
-              <Contact />
-            </>
-          }
-        />
-        {/* Project Detail Page */}
-        <Route path="/projects/:title" element={<ProjectExplain />} />
-      </Routes>
-      <Footer />
-      {/* </div> */}
-    </Router>
-  );
-}
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollToTopOnNavigate />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/project/:slug" element={<ProjectDetail />} />
+          <Route path="/work-experience" element={<WorkExperience />} />
+          <Route path="/academic-transcript" element={<AcademicTranscript />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;

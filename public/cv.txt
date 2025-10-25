@@ -1,0 +1,76 @@
+CURRICULUM VITAE
+
+[Your Name]
+Computer Science Graduate
+University of Colombo School of Computing
+
+Contact Information:
+Email: your.email@example.com
+Phone: +94 XX XXX XXXX
+LinkedIn: linkedin.com/in/yourprofile
+GitHub: github.com/yourusername
+
+---
+
+EDUCATION
+
+BSc in Computer Science
+University of Colombo School of Computing
+2022 - August 2025
+Second Class Upper Division
+
+GCE Advanced Level - Physical Science
+Royal College Colombo 07
+2018 - 2020
+Combined Mathematics, Physics, Chemistry
+
+---
+
+TECHNICAL SKILLS
+
+Frontend: React, TypeScript, JavaScript, HTML5, CSS3, Angular, Tailwind CSS
+Backend: Node.js, Express.js, ASP.NET Core
+Mobile: React Native, Flutter
+Database: MongoDB, MySQL, Firebase, MS SQL Server
+Tools: Git, Firebase
+
+---
+
+PROJECTS
+
+1. SKILLsparQ Freelancing Platform
+   - Full-stack freelancing platform with real-time chat and payment integration
+   - Technologies: HTML, CSS, JavaScript, MySQL
+
+2. KindCoin Donation Platform
+   - Donation Web Application with crypto awarding system
+   - Technologies: MongoDB, Express.js, React, Node.js
+
+3. BioMark Mobile Application
+   - Cross-platform mobile application for biometric attendance tracking
+   - Technologies: Flutter, Firebase, FireStore, Express.js
+
+4. Simple Ecommerce Mobile Application
+   - Modern e-commerce mobile application
+   - Technologies: React Native
+
+5. eFinancials Fixed Deposit System
+   - Enterprise financial management system
+   - Technologies: Angular 19, ASP .NET Core, MS SQL Server, PrimeNG, Bootstrap
+
+---
+
+WORK EXPERIENCE
+
+Software Engineer Intern
+Tech Company
+2024 - Present
+
+- Developing and maintaining web applications using modern frameworks
+- Collaborating with cross-functional teams in agile environment
+- Writing clean, maintainable, and efficient code
+- Participating in code reviews and technical discussions
+
+---
+
+Note: This is a placeholder CV. Replace with your actual Overleaf resume link.
