@@ -53,16 +53,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 1,
-    slug: "skillsparq",
-    title: "SKILLsparQ Freelancing Platform",
-    description:
-      "Full-stack freelancing platform with real-time chat and payment integration.",
-    image: skillsparqImage,
-    technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
-    details: "A comprehensive freelancing platform featuring user authentication, real-time messaging system, secure payment processing, and advanced search functionality. Built with responsive design principles and optimized for performance across all devices.",
+    id: 5,
+    slug: "efinancials",
+    title: "eFinancials Fixed Deposit System",
+    description: "Enterprise financial management system for fixed deposits.",
+    image: efinancialsImage,
+    technologies: [
+      "Angular 19",
+      "ASP .NET Core",
+      "MS SQL Server",
+      "PrimeNG",
+      "Bootstrap",
+    ],
+    details: "Enterprise-grade financial management system for handling fixed deposit operations. Features include customer management, interest calculations, automated reporting, and comprehensive audit trails.",
     demoLink: "",
-    githubLink1: "https://github.com/sahan462/Skillsparq",
+    githubLink1: "",
   },
   {
     id: 2,
@@ -75,6 +80,18 @@ export const projects: Project[] = [
     demoLink: "",
     githubLink1: "https://github.com/ruwangakonara/kindcoinfront",
     githubLink2: "https://github.com/ruwangakonara/kindcoinserver",
+  },
+  {
+    id: 1,
+    slug: "skillsparq",
+    title: "SKILLsparQ Freelancing Platform",
+    description:
+      "Full-stack freelancing platform with real-time chat and payment integration.",
+    image: skillsparqImage,
+    technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
+    details: "A comprehensive freelancing platform featuring user authentication, real-time messaging system, secure payment processing, and advanced search functionality. Built with responsive design principles and optimized for performance across all devices.",
+    demoLink: "",
+    githubLink1: "https://github.com/sahan462/Skillsparq",
   },
   {
     id: 3,
@@ -99,23 +116,7 @@ export const projects: Project[] = [
     demoLink: "",
     githubLink1: "https://github.com/Chamalfernando/ReactNative_Assessment",
   },
-  {
-    id: 5,
-    slug: "efinancials",
-    title: "eFinancials Fixed Deposit System",
-    description: "Enterprise financial management system for fixed deposits.",
-    image: efinancialsImage,
-    technologies: [
-      "Angular 19",
-      "ASP .NET Core",
-      "MS SQL Server",
-      "PrimeNG",
-      "Bootstrap",
-    ],
-    details: "Enterprise-grade financial management system for handling fixed deposit operations. Features include customer management, interest calculations, automated reporting, and comprehensive audit trails.",
-    demoLink: "",
-    githubLink1: "",
-  },
+  
 ];
 
 export interface WorkExperience {
@@ -132,16 +133,16 @@ export const workExperiences: WorkExperience[] = [
     title: "Associate Software Engineer",
     company: "Scienter Technologies (Pte) Ltd",
     duration: "2025 June - Present",
-    description: "Developing enterprise-level financial management systems and contributing to full-stack development projects using modern technologies and best practices.",
+    description: "Developing a robust, enterprise-level financial fixed deposit management system and contributing to full-stack development using modern technologies and best practices.",
     responsibilities: [
-      "Designing and implementing scalable web applications using Angular and ASP.NET Core",
-      "Developing RESTful APIs and integrating third-party services",
-      "Collaborating with cross-functional teams in an agile development environment",
-      "Writing clean, maintainable, and well-documented code following industry standards",
-      "Participating in code reviews and providing constructive feedback to team members",
-      "Optimizing application performance and implementing security best practices"
+      "Actively contributed to both frontend and backend development using modern technologies and frameworks like Angular and .NET Core in order to align with project requirements",
+      "Successfully performed data migration between database environments, ensuring data integrity, consistency, and successful integration",
+      "Set up the QA environment for comprehensive system testing and fixed bugs raised by the QA Team",
+      "Proactively identified and resolved development issues, collaborating with team members to enhance overall code quality and project efficiency",
+      "Added new features for enhancements and performed modifications to the development codebase based on changing project requirements",
+      "Assisted junior developers and interns with bug fixing, troubleshooting, and knowledge sharing to support team productivity and growth"
     ],
-    technologies: ["Angular 19", "ASP.NET Core", "TypeScript", "MS SQL Server", "PrimeNG", "Bootstrap"]
+    technologies: ["Angular", "ASP.NET Core", "TypeScript", "MS SQL Server", "PrimeNG", "Bootstrap", "Git", "Swagger", "Native Federation"]
   },
   {
     title: "Intern Software Engineer",
@@ -156,7 +157,7 @@ export const workExperiences: WorkExperience[] = [
       "Participating in code reviews and providing constructive feedback to team members",
       "Optimizing application performance and implementing security best practices"
     ],
-    technologies: ["Angular 19", "ASP.NET Core", "TypeScript", "MS SQL Server", "PrimeNG", "Bootstrap"]
+    technologies: ["Angular", "ASP.NET Core", "TypeScript", "MS SQL Server", "PrimeNG", "Bootstrap"]
   }
 ];
 

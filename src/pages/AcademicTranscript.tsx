@@ -95,9 +95,9 @@ const AcademicTranscript = () => {
               Home
             </Button>
           </Link>
-          <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {/* <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Academic Transcript
-          </h1>
+          </h1> */}
           <div className="w-20" />
         </div>
       </nav>
@@ -113,7 +113,7 @@ const AcademicTranscript = () => {
           >
             <div className="inline-flex items-center gap-3 bg-destructive/10 text-destructive px-6 py-3 rounded-full mb-6 border border-destructive/30">
               <ShieldAlert className="w-5 h-5" />
-              <span className="font-semibold">Protected Document - No Downloads</span>
+              <span className="font-semibold">Protected Document</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -150,7 +150,7 @@ const AcademicTranscript = () => {
             <div className="mt-6 p-4 bg-destructive/5 rounded-lg border border-destructive/20">
               <p className="text-sm text-muted-foreground text-center">
                 <ShieldAlert className="inline-block w-4 h-4 mr-2" />
-                This document is view-only and protected from unauthorized copying, downloading, or printing.
+                This document is view-only and protected from unauthorized copying, or printing.
               </p>
             </div>
           </motion.div>

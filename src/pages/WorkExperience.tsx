@@ -1,8 +1,11 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Home, Briefcase, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { workExperiences } from '@/data/portfolio';
+import workspace1 from '@/assets/workspace-1.jpg';
+import workspace2 from '@/assets/workspace-2.jpg';
 
 const WorkExperience = () => {
   return (
@@ -16,9 +19,9 @@ const WorkExperience = () => {
               Home
             </Button>
           </Link>
-          <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {/* <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Work Experience
-          </h1>
+          </h1> */}
           <div className="w-20" /> {/* Spacer for alignment */}
         </div>
       </nav>
@@ -32,8 +35,8 @@ const WorkExperience = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              My Professional Journey
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight pb-2">
+              My Work Experience
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Documenting my industrial experience and professional growth in software development
@@ -48,17 +51,21 @@ const WorkExperience = () => {
             viewport={{ once: true }}
             className="mb-20"
           >
-            <h3 className="text-3xl font-bold mb-8 text-center text-accent">Current Workspace</h3>
+            {/* <h3 className="text-3xl font-bold mb-8 text-center text-accent">Current Workspace</h3> */}
             <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all">
-                <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center">
-                  <p className="text-muted-foreground">Workspace Image 1</p>
-                </div>
+              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all overflow-hidden">
+                <img 
+                  src={workspace1} 
+                  alt="Professional workspace setup 1" 
+                  className="aspect-video rounded-lg object-cover w-full"
+                />
               </div>
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all">
-                <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center">
-                  <p className="text-muted-foreground">Workspace Image 2</p>
-                </div>
+              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all overflow-hidden">
+                <img 
+                  src={workspace2} 
+                  alt="Professional workspace setup 2" 
+                  className="aspect-video rounded-lg object-cover w-full"
+                />
               </div>
             </div>
           </motion.div>
@@ -72,16 +79,14 @@ const WorkExperience = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="relative pl-8 pb-12 border-l-2 border-primary/30 last:pb-0"
+                className="relative pl-8 pb-12 border-l-2 border-accent/30 last:pb-0"
               >
-                <div className="absolute left-[-13px] top-0 w-6 h-6 rounded-full bg-primary border-4 border-background">
-                  <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
-                </div>
+                <div className="absolute left-[-13px] top-0 w-6 h-6 rounded-full bg-accent border-4 border-background" />
                 
-                <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-card/70 transition-all duration-300 border border-border/50 hover:border-primary/50 hover:shadow-glow-primary">
+                <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-card/70 transition-all duration-300 border border-border/50 hover:border-accent/50 hover:shadow-glow-accent">
                   <div className="flex items-start justify-between mb-6 flex-wrap gap-4">
                     <div>
-                      <h3 className="text-3xl font-bold text-primary mb-2 flex items-center gap-2">
+                      <h3 className="text-3xl font-bold text-accent mb-2 flex items-center gap-2">
                         <Briefcase className="w-7 h-7" />
                         {experience.title}
                       </h3>
@@ -97,7 +102,7 @@ const WorkExperience = () => {
                     <ul className="space-y-2">
                       {experience.responsibilities.map((resp, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <span className="text-primary mt-1.5">▸</span>
+                          <span className="text-accent mt-1.5">▸</span>
                           <span className="text-foreground">{resp}</span>
                         </li>
                       ))}
@@ -110,7 +115,7 @@ const WorkExperience = () => {
                       {experience.technologies.map((tech, idx) => (
                         <span 
                           key={idx}
-                          className="px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium border border-primary/30 hover:bg-primary/20 transition-colors"
+                          className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm border border-accent/20"
                         >
                           {tech}
                         </span>

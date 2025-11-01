@@ -52,7 +52,7 @@ const WorkExperience = () => {
                 
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2 text-accent">Key Responsibilities:</h4>
-                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                  <ul className="list-disc list-outside space-y-1 text-muted-foreground pl-5">
                     {experience.responsibilities.map((resp, idx) => (
                       <li key={idx}>{resp}</li>
                     ))}

@@ -70,8 +70,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Computer Science Graduate at University of Colombo School of Computing, passionate about creating 
-            innovative web and mobile solutions with modern technologies
+            Computer Science Graduate from University of Colombo School of Computing, passionate about creating 
+            innovative software {/*web and mobile*/} solutions with modern technologies
           </motion.p>
 
           <motion.div 

@@ -12,7 +12,7 @@ const Index = () => {
     <main className="min-h-screen bg-background text-foreground">
       <Hero />
       <Skills />
-      <WorkExperience />
+      {/* <WorkExperience /> */}
       <Education />
       <Projects />
       <Contact />
