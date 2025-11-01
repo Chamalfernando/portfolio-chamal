@@ -131,7 +131,7 @@ export const workExperiences: WorkExperience[] = [
   {
     title: "Associate Software Engineer",
     company: "Scienter Technologies (Pte) Ltd",
-    duration: "2024 - Present",
+    duration: "2025 June - Present",
     description: "Developing enterprise-level financial management systems and contributing to full-stack development projects using modern technologies and best practices.",
     responsibilities: [
       "Designing and implementing scalable web applications using Angular and ASP.NET Core",
@@ -141,7 +141,22 @@ export const workExperiences: WorkExperience[] = [
       "Participating in code reviews and providing constructive feedback to team members",
       "Optimizing application performance and implementing security best practices"
     ],
-    technologies: ["Angular 19", "ASP.NET Core", "TypeScript", "MS SQL Server", "PrimeNG", "Bootstrap", "Entity Framework"]
+    technologies: ["Angular 19", "ASP.NET Core", "TypeScript", "MS SQL Server", "PrimeNG", "Bootstrap"]
+  },
+  {
+    title: "Intern Software Engineer",
+    company: "Scienter Technologies (Pte) Ltd",
+    duration: "2024 Nov - 2025 May",
+    description: "Developing enterprise-level financial management systems and contributing to full-stack development projects using modern technologies and best practices.",
+    responsibilities: [
+      "Designing and implementing scalable web applications using Angular and ASP.NET Core",
+      "Developing RESTful APIs and integrating third-party services",
+      "Collaborating with cross-functional teams in an agile development environment",
+      "Writing clean, maintainable, and well-documented code following industry standards",
+      "Participating in code reviews and providing constructive feedback to team members",
+      "Optimizing application performance and implementing security best practices"
+    ],
+    technologies: ["Angular 19", "ASP.NET Core", "TypeScript", "MS SQL Server", "PrimeNG", "Bootstrap"]
   }
 ];
 
