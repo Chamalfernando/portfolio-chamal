@@ -16,7 +16,8 @@ export const educations: Education[] = [
   {
     title: "BSc in Computer Science",
     institution: "University of Colombo School of Computing",
-    duration: "2022 - August 2025",
+    // duration: "2022 - August 2025",
+    duration: "2025",
     description:
       "Successfully completed academic Studies with a Second Class Upper Division",
     icon: "🎓",
@@ -24,14 +25,16 @@ export const educations: Education[] = [
   {
     title: "GCE Advanced Level - Physical Science",
     institution: "Royal College Colombo 07",
-    duration: "2018 - 2020",
+    // duration: "2018 - 2020",
+    duration: "2020",
     description: "Combined Mathematics, Physics, Chemistry",
     icon: "📚",
   },
   {
     title: "GCE Ordinary Level - Local Syllabus",
     institution: "Carey College Colombo 08",
-    duration: "2011 - 2017",
+    // duration: "2011 - 2017",
+    duration: "2017",
     description: "Successfully completed O/Ls with 9 A's",
     icon: "🏫",
   },

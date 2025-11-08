@@ -16,17 +16,18 @@ const Education = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Education
+            Qualifications
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
             Academic journey and qualifications that shaped my technical foundation
           </p>
-          <Link to="/academic-transcript">
+          {/* COMMENT */}
+          {/* <Link to="/academic-transcript">
             <Button variant="outline" className="gap-2">
               <FileText className="w-4 h-4" />
               View Academic Transcript
             </Button>
-          </Link>
+          </Link> */}
         </motion.div>
 
         <div className="max-w-4xl mx-auto">

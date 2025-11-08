@@ -82,7 +82,7 @@ const Hero = () => {
           >
             <Link to="/work-experience">
               <Button variant="hero" size="lg" className="group">
-                My Work Experience
+                Professional Experience
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -103,7 +103,7 @@ const Hero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer" 
-              href="https://github.com" className="p-3 rounded-full bg-card/50 backdrop-blur-sm hover:bg-accent/20 transition-all duration-300 hover:scale-110">
+              href="https://github.com/Chamalfernando" className="p-3 rounded-full bg-card/50 backdrop-blur-sm hover:bg-accent/20 transition-all duration-300 hover:scale-110">
               <Github className="h-6 w-6" />
             </a>
             <a

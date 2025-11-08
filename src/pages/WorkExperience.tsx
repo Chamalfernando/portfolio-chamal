@@ -36,7 +36,7 @@ const WorkExperience = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight pb-2">
-              My Work Experience
+              Professional Experience
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Documenting my industrial experience and professional growth in software development

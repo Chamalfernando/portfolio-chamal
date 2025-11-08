@@ -27,14 +27,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/work-experience" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Work Experience
+                  Professional Experience
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/academic-transcript" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Academic Transcript
                 </Link>
-              </li>
+              </li> */}{/* COMMENT */}
             </ul>
           </div>
 
@@ -50,7 +50,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/chamal-fernando"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors border border-primary/20"
@@ -59,7 +59,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5 text-primary" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Chamalfernando"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors border border-primary/20"
