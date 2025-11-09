@@ -204,3 +204,86 @@ export const skills: Skill[] = [
   { name: "React Native", category: "Mobile", icon: "📱" },
   { name: "Flutter", category: "Mobile", icon: "🦋" },
 ];
+
+export interface Certification {
+  name: string;
+  institution: string;
+  issueDate: string;
+  credentialUrl: string;
+  description: string;
+}
+
+export interface CertificationCategory {
+  institution: string;
+  logo: string;
+  certifications: Certification[];
+}
+
+export const certificationCategories: CertificationCategory[] = [
+  {
+    institution: "Coursera",
+    logo: "🎓",
+    certifications: [
+      {
+        name: "Front-End Web Development with React",
+        institution: "The Hong Kong University of Science and Technology",
+        issueDate: "September 2023",
+        credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE1",
+        description: "Comprehensive course covering React fundamentals, component lifecycle, hooks, and state management."
+      },
+      {
+        name: "Server-side Development with NodeJS, Express and MongoDB",
+        institution: "The Hong Kong University of Science and Technology",
+        issueDate: "October 2023",
+        credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE2",
+        description: "Advanced backend development with Node.js, Express.js framework, and MongoDB database integration."
+      }
+    ]
+  },
+  {
+    institution: "Udemy",
+    logo: "📚",
+    certifications: [
+      {
+        name: "The Complete 2024 Web Development Bootcamp",
+        institution: "Dr. Angela Yu",
+        issueDate: "January 2024",
+        credentialUrl: "https://www.udemy.com/certificate/EXAMPLE3",
+        description: "Full-stack web development covering HTML, CSS, JavaScript, Node.js, React, and database management."
+      },
+      {
+        name: "Flutter & Dart - The Complete Guide",
+        institution: "Maximilian Schwarzmüller",
+        issueDate: "March 2024",
+        credentialUrl: "https://www.udemy.com/certificate/EXAMPLE4",
+        description: "Comprehensive Flutter course including widgets, state management, Firebase integration, and deployment."
+      }
+    ]
+  },
+  {
+    institution: "Microsoft",
+    logo: "💼",
+    certifications: [
+      {
+        name: "Microsoft Certified: Azure Fundamentals",
+        institution: "Microsoft",
+        issueDate: "May 2024",
+        credentialUrl: "https://www.credly.com/badges/EXAMPLE5",
+        description: "Foundational knowledge of cloud services and Azure cloud concepts, core services, and solutions."
+      }
+    ]
+  },
+  {
+    institution: "LinkedIn Learning",
+    logo: "💼",
+    certifications: [
+      {
+        name: "LinkedIn Learning Certified: .NET for beginners",
+        institution: "Microsoft",
+        issueDate: "May 2024",
+        credentialUrl: "https://www.credly.com/badges/EXAMPLE5",
+        description: "Foundational knowledge of cloud services and Azure cloud concepts, core services, and solutions."
+      }
+    ]
+  }
+];

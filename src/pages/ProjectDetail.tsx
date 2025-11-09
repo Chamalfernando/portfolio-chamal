@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Home } from 'lucide-react';
 import { projects } from '@/data/portfolio';
 
 const ProjectDetail = () => {
@@ -33,8 +33,9 @@ const ProjectDetail = () => {
             onClick={() => navigate('/')}
             className="group"
           >
-            <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Back to Home
+            {/* <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" /> */}
+            <Home className="h-4 w-4" />
+            Home
           </Button>
         </div>
       </nav>
@@ -158,7 +159,7 @@ const ProjectDetail = () => {
               onClick={() => navigate('/')}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Portfolio
+              Back to Home
             </Button>
           </motion.div>
         </div>

@@ -30,6 +30,11 @@ const Footer = () => {
                   Professional Experience
                 </Link>
               </li>
+              <li>
+                <Link to="/certifications" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Certifications
+                </Link>
+              </li>
               {/* <li>
                 <Link to="/academic-transcript" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Academic Transcript

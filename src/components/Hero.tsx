@@ -92,6 +92,12 @@ const Hero = () => {
                 Download CV
               </Button>
             </a>
+            <Link to="/certifications">
+              <Button variant="hero" size="lg" className="group">
+                My Certifications
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div 

@@ -9,6 +9,7 @@ import WorkExperience from "./pages/WorkExperience";
 import AcademicTranscript from "./pages/AcademicTranscript";
 import NotFound from "./pages/NotFound";
 import ScrollToTopOnNavigate from "./components/ScrollToTopOnNavigate";
+import Certifications from "./pages/Certifications";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/project/:slug" element={<ProjectDetail />} />
           <Route path="/work-experience" element={<WorkExperience />} />
+          <Route path="/certifications" element={<Certifications />} />
           {/* <Route path="/academic-transcript" element={<AcademicTranscript />} /> */}{/* COMMENT */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
