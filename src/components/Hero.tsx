@@ -87,7 +87,7 @@ const Hero = () => {
               </Button>
             </Link>
             <a href="/cv.txt" download>
-              <Button variant="outline" size="lg" className="group">
+              <Button variant="hero" size="lg" className="group">
                 <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Download CV
               </Button>

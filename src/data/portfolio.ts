@@ -188,9 +188,9 @@ export const skills: Skill[] = [
   
   // Database
   { name: "MS SQL Server", category: "Database", icon: "💾" },
-  { name: "PostgreSQL", category: "Database", icon: "🐘" },
+  // { name: "PostgreSQL", category: "Database", icon: "🐘" },
   { name: "MySQL", category: "Database", icon: "🐬" },
-  { name: "Firebase", category: "Database", icon: "🔥" },
+  // { name: "Firebase", category: "Database", icon: "🔥" },
   { name: "MongoDB", category: "Database", icon: "🍃" },
   
   // Tools
@@ -221,69 +221,162 @@ export interface CertificationCategory {
 
 export const certificationCategories: CertificationCategory[] = [
   {
-    institution: "Coursera",
-    logo: "🎓",
-    certifications: [
-      {
-        name: "Front-End Web Development with React",
-        institution: "The Hong Kong University of Science and Technology",
-        issueDate: "September 2023",
-        credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE1",
-        description: "Comprehensive course covering React fundamentals, component lifecycle, hooks, and state management."
-      },
-      {
-        name: "Server-side Development with NodeJS, Express and MongoDB",
-        institution: "The Hong Kong University of Science and Technology",
-        issueDate: "October 2023",
-        credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE2",
-        description: "Advanced backend development with Node.js, Express.js framework, and MongoDB database integration."
-      }
-    ]
-  },
-  {
-    institution: "Udemy",
-    logo: "📚",
-    certifications: [
-      {
-        name: "The Complete 2024 Web Development Bootcamp",
-        institution: "Dr. Angela Yu",
-        issueDate: "January 2024",
-        credentialUrl: "https://www.udemy.com/certificate/EXAMPLE3",
-        description: "Full-stack web development covering HTML, CSS, JavaScript, Node.js, React, and database management."
-      },
-      {
-        name: "Flutter & Dart - The Complete Guide",
-        institution: "Maximilian Schwarzmüller",
-        issueDate: "March 2024",
-        credentialUrl: "https://www.udemy.com/certificate/EXAMPLE4",
-        description: "Comprehensive Flutter course including widgets, state management, Firebase integration, and deployment."
-      }
-    ]
-  },
-  {
-    institution: "Microsoft",
-    logo: "💼",
-    certifications: [
-      {
-        name: "Microsoft Certified: Azure Fundamentals",
-        institution: "Microsoft",
-        issueDate: "May 2024",
-        credentialUrl: "https://www.credly.com/badges/EXAMPLE5",
-        description: "Foundational knowledge of cloud services and Azure cloud concepts, core services, and solutions."
-      }
-    ]
-  },
-  {
     institution: "LinkedIn Learning",
     logo: "💼",
     certifications: [
       {
-        name: "LinkedIn Learning Certified: .NET for beginners",
-        institution: "Microsoft",
-        issueDate: "May 2024",
-        credentialUrl: "https://www.credly.com/badges/EXAMPLE5",
-        description: "Foundational knowledge of cloud services and Azure cloud concepts, core services, and solutions."
+        name: "Back-End Web Development with .NET",
+        institution: "LinkedIn Learning",
+        issueDate: "January 18, 2025",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/648c0fd998cd40492b38379ee272a4eb1c938dca5d57d9dfa9eba896ea8f623e?trk=share_certificate",
+        description: "Comprehensive course on back-end web development using .NET, covering ASP.NET Core, RESTful APIs, and database integration."
+      },
+      {
+        name: "Building RESTful APIs with Node.js and Express",
+        institution: "LinkedIn Learning",
+        issueDate: "June 5, 2024",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/271c3b116b462297ad6b0b0a2821c56df849d177dbdf058a1fbb73f0b5e0c593?trk=share_certificate",
+        description: "In-depth course on building RESTful APIs using Node.js and Express, focusing on routing, middleware, and database connectivity."
+      },
+      {
+        name: "Node.js: Securing RESTful APIs",
+        institution: "LinkedIn Learning",
+        issueDate: "June 5, 2024",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/5a353f34e1c5ec858fe7d3ff95f3a200ae4543500c1cc31494e08500f7facca0?trk=share_certificate",
+        description: "Specialized course on securing RESTful APIs built with Node.js, covering authentication, authorization, and best security practices."
+      },
+      {
+        name: "Docker for Developers",
+        institution: "LinkedIn Learning",
+        issueDate: "May 11, 2024",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/893f10bed90dbda5110d3e68e10651b2bfa080ea1b8426b47257e31a07ccf286?trk=share_certificate",
+        description: "Comprehensive course on Docker for developers, covering containerization, image creation, and deployment strategies."
+      },
+      {
+        name: "Building APIs with Swagger and the OpenAPI Specification",
+        institution: "LinkedIn Learning",
+        issueDate: "May 27, 2024",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/c72df1c3f456dd675f6c859665c817137b9f094b61f6b3212f8bdede7883fb4f?trk=share_certificate",
+        description: "Detailed course on building APIs using Swagger and the OpenAPI Specification, focusing on API design, documentation, and testing."
+      },
+      {
+        name: "Agile Development Practices",
+        institution: "LinkedIn Learning",
+        issueDate: "May 15, 2024",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/780aa276a7a4225c82a7d096e5eee54c46aed3fe3d620aee8d63c649beff56c9?trk=share_certificate",
+        description: "Comprehensive course on Agile development practices, covering Scrum, Kanban, and effective team collaboration techniques."
+      },
+      {
+        name: "React.js Essential Training",
+        institution: "LinkedIn Learning",
+        issueDate: "May 11, 2024",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/0c9e782ce8f996e25064acdb570d666de8dcf36731fc19c82fd83dd1a35aee5f?trk=share_certificate",
+        description: "Course on React.js, covering component-based architecture, state management, and building dynamic user interfaces."
+      },
+      {
+        name: "Agile Software Development",
+        institution: "LinkedIn Learning",
+        issueDate: "December 5, 2023",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/33ef51df80cb22b73a341a84cdbfac67a1fcc98bfa637856e7d649a12ab5eb6a?trk=share_certificate",
+        description: "Comprehensive overview of Agile software development methodologies, including Scrum and Kanban frameworks, to enhance project management and team collaboration."
+      },
+      {
+        name: "Introduction to Prompt Engineering for Generative AI",
+        institution: "LinkedIn Learning",
+        issueDate: "May 27, 2024",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/0f0f92eeacbb255362355ce9be81eb92f0007c7af2c95e04eed361170da7c017?trk=share_certificate",
+        description: "Introductory course on prompt engineering techniques for generative AI models, focusing on effective prompt design and optimization strategies."
+      },
+      {
+        name: "Introduction to Dart",
+        institution: "LinkedIn Learning",
+        issueDate: "December 15, 2023",
+        credentialUrl: "https://www.linkedin.com/learning/certificates/533f97bf9ef85fe0c1530fc12fb1754a4a1eae94009530cdf9171d7d231423b6?trk=share_certificate",
+        description: "Comprehensive introduction to the Dart programming language, covering syntax, data structures, and object-oriented programming concepts."
       }
     ]
-  }
+  },
+  // {
+  //   institution: "Udemy",
+  //   logo: "📚",
+  //   certifications: [
+  //     {
+  //       name: "Docker for Java Developers",
+  //       institution: "Udemy",
+  //       issueDate: "Aug 29, 2024",
+  //       credentialUrl: "https://www.udemy.com/certificate/UC-1332e027-f3b9-4ad9-a38c-9dd72470a253/",
+  //       description: "Comprehensive Docker course tailored for Java developers, covering containerization, image creation, and deployment strategies."
+  //     },
+  //     {
+  //       name: "Flutter & Dart - The Complete Guide",
+  //       institution: "Maximilian Schwarzmüller",
+  //       issueDate: "March 2024",
+  //       credentialUrl: "",
+  //       description: "Comprehensive Flutter course including widgets, state management, Firebase integration, and deployment."
+  //     }
+  //   ]
+  // },
+  {
+    institution: "Coursera",
+    logo: "🎓",
+    certifications: [
+      {
+        name: "Introduction to Front-End Development",
+        institution: "Meta",
+        issueDate: "June 29, 2023",
+        credentialUrl: "https://www.coursera.org/account/accomplishments/verify/P9J74UZVWFBK",
+        description: "Comprehensive course covering Front-End fundamentals including HTML, CSS, JavaScript responsive design principles."
+      }
+      ,
+      {
+        name: "Programming with JavaScript",
+        institution: "Meta",
+        issueDate: "Sept 20, 2023",
+        credentialUrl: "https://www.coursera.org/account/accomplishments/verify/J5X89E3D3MAN",
+        description: "Exploration of JavaScript programming concepts including variables, functions, objects, DOM manipulation, and event handling."
+      }
+      ,
+      {
+        name: "Introduction to Git and GitHub",
+        institution: "Google",
+        issueDate: "June 14, 2023",
+        credentialUrl: "https://www.coursera.org/account/accomplishments/verify/LYSTSP28SMG4",
+        description: "Overview of version control using Git and GitHub, covering branches, commits, merges, and collaboration workflows etc."
+      }
+      // ,
+      // {
+      //   name: "Google Cloud Fundamentals: Core Infrastructure",
+      //   institution: "Google Cloud",
+      //   issueDate: "June 29, 2023",
+      //   credentialUrl: "https://www.coursera.org/account/accomplishments/verify/5C5VTANK7RFK",
+      //   description: "Introduction to Google Cloud Platform services, infrastructure, and solutions including compute, storage and networking."
+      // }
+    ]
+  },
+  // {
+  //   institution: "IBM",
+  //   logo: "💼",
+  //   certifications: [
+  //     {
+  //       name: "Git and GitHub Essentials",
+  //       institution: "IBM",
+  //       issueDate: "July 14, 2023",
+  //       credentialUrl: "https://www.credly.com/badges/69e51e12-a053-44f1-a00c-64f43cb57f37/print",
+  //       description: "Fundamental skills in using Git and GitHub for version control, collaboration, and code management."
+  //     }
+  //   ]
+  // },
+  // {
+  //   institution: "Microsoft",
+  //   logo: "💼",
+  //   certifications: [
+  //     {
+  //       name: "Microsoft Certified: Azure Fundamentals",
+  //       institution: "Microsoft",
+  //       issueDate: "May 2024",
+  //       credentialUrl: "https://www.credly.com/badges/EXAMPLE5",
+  //       description: "Foundational knowledge of cloud services and Azure cloud concepts, core services, and solutions."
+  //     }
+  //   ]
+  // }
 ];
