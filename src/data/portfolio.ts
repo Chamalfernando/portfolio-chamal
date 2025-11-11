@@ -58,16 +58,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 1,
-    slug: "skillsparq",
-    title: "SKILLsparQ Freelancing Platform",
-    description:
-      "Full-stack freelancing platform with real-time chat and payment integration.",
-    image: skillsparqImage,
-    technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
-    details: "A comprehensive freelancing platform featuring user authentication, real-time messaging system, secure payment processing, and advanced search functionality. Built with responsive design principles and optimized for performance across all devices.",
+    id: 5,
+    slug: "efinancials",
+    title: "eFinancials Fixed Deposit System",
+    description: "Enterprise financial management system for fixed deposits.",
+    image: efinancialsImage,
+    technologies: [
+      "Angular 19",
+      "ASP .NET Core",
+      "MS SQL Server",
+      "PrimeNG",
+      "Bootstrap",
+    ],
+    details: "Enterprise-grade financial management system for handling fixed deposit operations. Features include customer management, interest calculations, automated reporting, and comprehensive audit trails.",
     demoLink: "",
-    githubLink1: "https://github.com/sahan462/Skillsparq",
+    githubLink1: "",
   },
   {
     id: 2,
@@ -81,6 +86,18 @@ export const projects: Project[] = [
     demoLink: "",
     githubLink1: "https://github.com/ruwangakonara/kindcoinfront",
     githubLink2: "https://github.com/ruwangakonara/kindcoinserver",
+  },
+  {
+    id: 1,
+    slug: "skillsparq",
+    title: "SKILLsparQ Freelancing Platform",
+    description:
+      "Full-stack freelancing platform with real-time chat and payment integration.",
+    image: skillsparqImage,
+    technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
+    details: "A comprehensive freelancing platform featuring user authentication, real-time messaging system, secure payment processing, and advanced search functionality. Built with responsive design principles and optimized for performance across all devices.",
+    demoLink: "",
+    githubLink1: "https://github.com/sahan462/Skillsparq",
   },
   {
     id: 3,
@@ -104,23 +121,6 @@ export const projects: Project[] = [
     details: "Modern e-commerce mobile application with intuitive user interface, state management using Redux, product catalog browsing, shopping cart functionality, and seamless checkout process.",
     demoLink: "",
     githubLink1: "https://github.com/Chamalfernando/ReactNative_Assessment",
-  },
-  {
-    id: 5,
-    slug: "efinancials",
-    title: "eFinancials Fixed Deposit System",
-    description: "Enterprise financial management system for fixed deposits.",
-    image: efinancialsImage,
-    technologies: [
-      "Angular 19",
-      "ASP .NET Core",
-      "MS SQL Server",
-      "PrimeNG",
-      "Bootstrap",
-    ],
-    details: "Enterprise-grade financial management system for handling fixed deposit operations. Features include customer management, interest calculations, automated reporting, and comprehensive audit trails.",
-    demoLink: "",
-    githubLink1: "",
   },
 ];
 
