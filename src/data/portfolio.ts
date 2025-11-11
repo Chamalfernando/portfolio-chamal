@@ -46,8 +46,10 @@ export interface Project {
   title: string;
   description: string;
   image: string;
+  images?: string[]; // Optional: Multiple images for detailed project showcase
   technologies: string[];
   details: string;
+  longDescription?: string; // Optional: More detailed description with sections
   demoLink: string;
   githubLink1: string;
   githubLink2?: string;
@@ -55,35 +57,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    id: 5,
-    slug: "efinancials",
-    title: "eFinancials Fixed Deposit System",
-    description: "Enterprise financial management system for fixed deposits.",
-    image: efinancialsImage,
-    technologies: [
-      "Angular 19",
-      "ASP .NET Core",
-      "MS SQL Server",
-      "PrimeNG",
-      "Bootstrap",
-    ],
-    details: "Enterprise-grade financial management system for handling fixed deposit operations. Features include customer management, interest calculations, automated reporting, and comprehensive audit trails.",
-    demoLink: "",
-    githubLink1: "",
-  },
-  {
-    id: 2,
-    slug: "kindcoin",
-    title: "KindCoin Donation Platform",
-    description: "Donation Web Application with crypto awarding system.",
-    image: kindcoinImage,
-    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
-    details: "Modern donation platform implementing blockchain technology for transparent transactions. Features include donor tracking, campaign management, automated crypto rewards, and comprehensive analytics dashboard.",
-    demoLink: "",
-    githubLink1: "https://github.com/ruwangakonara/kindcoinfront",
-    githubLink2: "https://github.com/ruwangakonara/kindcoinserver",
-  },
   {
     id: 1,
     slug: "skillsparq",
@@ -95,6 +68,19 @@ export const projects: Project[] = [
     details: "A comprehensive freelancing platform featuring user authentication, real-time messaging system, secure payment processing, and advanced search functionality. Built with responsive design principles and optimized for performance across all devices.",
     demoLink: "",
     githubLink1: "https://github.com/sahan462/Skillsparq",
+  },
+  {
+    id: 2,
+    slug: "kindcoin",
+    title: "KindCoin Donation Platform",
+    description: "Donation Web Application with crypto awarding system.",
+    image: kindcoinImage,
+    images: [efinancialsImage,ecommerceImage,biomarkImage,kindcoinImage,skillsparqImage],
+    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+    details: "Modern donation platform implementing blockchain technology for transparent transactions. Features include donor tracking, campaign management, automated crypto rewards, and comprehensive analytics dashboard.",
+    demoLink: "",
+    githubLink1: "https://github.com/ruwangakonara/kindcoinfront",
+    githubLink2: "https://github.com/ruwangakonara/kindcoinserver",
   },
   {
     id: 3,
@@ -119,7 +105,23 @@ export const projects: Project[] = [
     demoLink: "",
     githubLink1: "https://github.com/Chamalfernando/ReactNative_Assessment",
   },
-  
+  {
+    id: 5,
+    slug: "efinancials",
+    title: "eFinancials Fixed Deposit System",
+    description: "Enterprise financial management system for fixed deposits.",
+    image: efinancialsImage,
+    technologies: [
+      "Angular 19",
+      "ASP .NET Core",
+      "MS SQL Server",
+      "PrimeNG",
+      "Bootstrap",
+    ],
+    details: "Enterprise-grade financial management system for handling fixed deposit operations. Features include customer management, interest calculations, automated reporting, and comprehensive audit trails.",
+    demoLink: "",
+    githubLink1: "",
+  },
 ];
 
 export interface WorkExperience {

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ExternalLink, Github, Home } from 'lucide-react';
 import { projects } from '@/data/portfolio';
+import ProjectDetailContent from '@/components/projects/ProjectDetailContent';
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -33,7 +34,6 @@ const ProjectDetail = () => {
             onClick={() => navigate('/')}
             className="group"
           >
-            {/* <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" /> */}
             <Home className="h-4 w-4" />
             Home
           </Button>
@@ -91,60 +91,8 @@ const ProjectDetail = () => {
             </div>
           </motion.div>
 
-          {/* Project Image */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative rounded-2xl overflow-hidden shadow-2xl mb-16"
-          >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-          </motion.div>
-
-          {/* Project Details */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="prose prose-lg max-w-none"
-          >
-            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">Project Overview</h2>
-              <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                {project.details}
-              </div>
-
-              {/* Additional GitHub Links */}
-              {(project.githubLink2 || project.githubLink3) && (
-                <div className="mt-8 pt-8 border-t border-border">
-                  <h3 className="text-xl font-semibold mb-4 text-foreground">Additional Repositories</h3>
-                  <div className="flex flex-col gap-3">
-                    {project.githubLink2 && (
-                      <Button variant="outline" asChild className="justify-start">
-                        <a href={project.githubLink2} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-2 h-4 w-4" />
-                          Repository 2
-                        </a>
-                      </Button>
-                    )}
-                    {project.githubLink3 && (
-                      <Button variant="outline" asChild className="justify-start">
-                        <a href={project.githubLink3} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-2 h-4 w-4" />
-                          Repository 3
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-          </motion.div>
+          {/* Dynamic Project Content - Renders custom component per slug */}
+          <ProjectDetailContent project={project} />
 
           {/* Bottom Navigation */}
           <motion.div
