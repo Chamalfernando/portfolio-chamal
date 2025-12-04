@@ -355,30 +355,34 @@ export const certificationCategories: CertificationCategory[] = [
       // }
     ]
   },
-  // {
-  //   institution: "IBM",
-  //   logo: "💼",
-  //   certifications: [
-  //     {
-  //       name: "Git and GitHub Essentials",
-  //       institution: "IBM",
-  //       issueDate: "July 14, 2023",
-  //       credentialUrl: "https://www.credly.com/badges/69e51e12-a053-44f1-a00c-64f43cb57f37/print",
-  //       description: "Fundamental skills in using Git and GitHub for version control, collaboration, and code management."
-  //     }
-  //   ]
-  // },
-  // {
-  //   institution: "Microsoft",
-  //   logo: "💼",
-  //   certifications: [
-  //     {
-  //       name: "Microsoft Certified: Azure Fundamentals",
-  //       institution: "Microsoft",
-  //       issueDate: "May 2024",
-  //       credentialUrl: "https://www.credly.com/badges/EXAMPLE5",
-  //       description: "Foundational knowledge of cloud services and Azure cloud concepts, core services, and solutions."
-  //     }
-  //   ]
-  // }
+  {
+    institution: "Microsoft Learn",
+    logo: "🪟",
+    certifications: [
+      {
+        name: "Describe cloud service types",
+        institution: "Microsoft Learn",
+        issueDate: "Jan 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/8RTVNFSW?sharingId=934856C92DA4A321",
+        description: "Comprehensive course covering cloud service types."
+      }
+      ,
+      {
+        name: "Describe the benefits of using cloud services",
+        institution: "Microsoft Learn",
+        issueDate: "Jan 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/24HJABTV?sharingId=934856C92DA4A321",
+        description: "Comprehensive course describing the benefits of using cloud services."
+      }
+      ,
+      {
+        name: "Describe cloud computing",
+        institution: "Microsoft Learn",
+        issueDate: "Jan 18, 2024",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/AQ9248H7?sharingId=934856C92DA4A321",
+        description: "Comprehensive course covering about cloud computing."
+      }
+      ,
+    ]
+  }
 ];
