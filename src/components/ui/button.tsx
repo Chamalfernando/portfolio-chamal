@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        hero: "bg-gradient-to-r from-primary to-accent text-white hover:from-primary/90 hover:to-accent/90 shadow-glow-accent animate-glow-pulse",
+        default: "bg-primary text-primary-foreground hover:bg-[#0071e3] rounded-full font-normal transition-colors",
+        hero: "bg-[#0066cc] text-white hover:bg-[#0071e3] rounded-full font-normal shadow-none transition-colors",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-full font-normal",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-[#d2d2d7] bg-white text-[#1d1d1f] hover:bg-[#f5f5f7] hover:text-[#1d1d1f] rounded-full font-normal transition-colors",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full font-normal",
+        ghost: "hover:bg-[#f5f5f7] hover:text-primary text-primary rounded-full font-normal transition-all",
+        link: "text-primary hover:underline p-0 h-auto font-normal",
       },
       size: {
         default: "h-10 px-4 py-2",

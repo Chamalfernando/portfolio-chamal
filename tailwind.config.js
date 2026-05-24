@@ -84,15 +84,17 @@ export default {
 				'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
 			},
 			fontFamily: {
-				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['SF Pro Text', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Inter', 'sans-serif'],
+				display: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Inter', 'sans-serif'],
 			},
 			backdropBlur: {
 				'glass': '12px'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				md: '11px',
+				sm: '8px',
+				pill: '9999px'
 			},
 			keyframes: {
 				'accordion-down': {

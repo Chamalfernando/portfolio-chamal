@@ -8,25 +8,22 @@ import workspace2 from '@/assets/workspace-2.jpg';
 
 const WorkExperience = () => {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#e0e0e0]">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link to="/">
-            <Button variant="ghost" size="sm" className="gap-2">
+            <Button variant="ghost" size="sm" className="gap-2 text-[#1d1d1f] hover:bg-[#f5f5f7]">
               <Home className="w-4 h-4" />
               Home
             </Button>
           </Link>
-          {/* <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Work Experience
-          </h1> */}
           <div className="w-20" /> {/* Spacer for alignment */}
         </div>
       </nav>
 
       {/* Content */}
-      <div className="pt-24 pb-20">
+      <div className="pt-28 pb-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,10 +31,10 @@ const WorkExperience = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight pb-2">
+            <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-[#1d1d1f] tracking-apple-tight leading-tight pb-2">
               Professional Experience
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-[#86868b] max-w-3xl mx-auto font-normal">
               Documenting my industrial experience and professional growth in software development
             </p>
           </motion.div>
@@ -50,16 +47,15 @@ const WorkExperience = () => {
             viewport={{ once: true }}
             className="mb-20"
           >
-            {/* <h3 className="text-3xl font-bold mb-8 text-center text-accent">Current Workspace</h3> */}
             <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all overflow-hidden">
+              <div className="bg-white border border-[#e0e0e0] rounded-[18px] p-4 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden">
                 <img 
                   src={workspace1} 
                   alt="Professional workspace setup 1" 
                   className="aspect-video rounded-lg object-cover w-full"
                 />
               </div>
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all overflow-hidden">
+              <div className="bg-white border border-[#e0e0e0] rounded-[18px] p-4 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden">
                 <img 
                   src={workspace2} 
                   alt="Professional workspace setup 2" 
@@ -78,43 +74,43 @@ const WorkExperience = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="relative pl-8 pb-12 border-l-2 border-accent/30 last:pb-0"
+                className="relative pl-8 pb-12 border-l border-[#d2d2d7] last:pb-0"
               >
-                <div className="absolute left-[-13px] top-0 w-6 h-6 rounded-full bg-accent border-4 border-background" />
+                <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-[#0066cc]" />
                 
-                <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-card/70 transition-all duration-300 border border-border/50 hover:border-accent/50 hover:shadow-glow-accent">
+                <div className="bg-white border border-[#e0e0e0] rounded-[18px] p-8 hover:scale-[1.005] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
                   <div className="flex items-start justify-between mb-6 flex-wrap gap-4">
                     <div>
-                      <h3 className="text-3xl font-bold text-accent mb-2 flex items-center gap-2">
-                        <Briefcase className="w-7 h-7" />
+                      <h3 className="text-2xl font-bold text-[#1d1d1f] mb-1.5 flex items-center gap-2">
+                        <Briefcase className="w-6 h-6 text-[#86868b]" />
                         {experience.title}
                       </h3>
-                      <p className="text-xl text-foreground font-semibold">{experience.company}</p>
-                      <p className="text-muted-foreground mt-1">{experience.duration}</p>
+                      <p className="text-base text-[#1d1d1f] font-semibold">{experience.company}</p>
+                      <p className="text-xs text-[#86868b] mt-0.5">{experience.duration}</p>
                     </div>
                   </div>
                   
-                  <p className="text-foreground text-lg mb-6 leading-relaxed">{experience.description}</p>
+                  <p className="text-[#1d1d1f] text-base mb-6 leading-relaxed font-normal">{experience.description}</p>
                   
                   <div className="mb-6">
-                    <h4 className="font-bold text-lg mb-3 text-accent">Key Responsibilities:</h4>
-                    <ul className="space-y-2">
+                    <h4 className="font-bold text-sm mb-3 text-[#1d1d1f]">Key Responsibilities:</h4>
+                    <ul className="space-y-2.5">
                       {experience.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <span className="text-accent mt-1.5">▸</span>
-                          <span className="text-foreground">{resp}</span>
+                        <li key={idx} className="flex items-start gap-3 text-sm">
+                          <span className="text-[#0066cc] mt-1.5 text-xs">▸</span>
+                          <span className="text-[#303033] leading-relaxed">{resp}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
                   <div>
-                    <h4 className="font-bold text-lg mb-3 text-accent">Technologies Used:</h4>
-                    <div className="flex flex-wrap gap-3">
+                    <h4 className="font-bold text-sm mb-3 text-[#1d1d1f]">Technologies Used:</h4>
+                    <div className="flex flex-wrap gap-2.5">
                       {experience.technologies.map((tech, idx) => (
                         <span 
                           key={idx}
-                          className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm border border-accent/20"
+                          className="px-3 py-1 bg-[#f5f5f7] text-[#1d1d1f] border border-[#e0e0e0] rounded-full text-xs font-semibold"
                         >
                           {tech}
                         </span>
@@ -134,8 +130,8 @@ const WorkExperience = () => {
             className="text-center mt-16"
           >
             <Link to="/">
-              <Button variant="outline" size="lg" className="gap-2">
-                <ArrowLeft className="w-5 h-5" />
+              <Button variant="outline" className="px-6 py-2.5 text-sm h-auto gap-2">
+                <ArrowLeft className="w-4 h-4" />
                 Back to Home
               </Button>
             </Link>
@@ -144,9 +140,9 @@ const WorkExperience = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-card/30 backdrop-blur-sm border-t border-border/50 py-8">
+      <footer className="bg-white border-t border-[#e0e0e0] py-8">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs text-[#86868b]">
             © {new Date().getFullYear()} Chamal Fernando. All rights reserved.
           </p>
         </div>

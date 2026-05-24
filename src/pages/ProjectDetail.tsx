@@ -25,14 +25,14 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
       {/* Navigation Bar */}
-      <nav className="fixed top-0 w-full bg-card/80 backdrop-blur-md border-b border-border z-50">
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-[#e0e0e0] z-50">
         <div className="container mx-auto px-6 py-4">
           <Button 
             variant="ghost" 
             onClick={() => navigate('/')}
-            className="group"
+            className="group text-[#1d1d1f] hover:bg-[#f5f5f7] gap-2"
           >
             <Home className="h-4 w-4" />
             Home
@@ -48,27 +48,27 @@ const ProjectDetail = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h1 className="font-display text-4xl md:text-6xl font-bold mb-6 text-[#1d1d1f] tracking-apple-tight">
               {project.title}
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
+            <p className="text-lg md:text-xl text-[#86868b] mb-8 max-w-3xl leading-relaxed">
               {project.description}
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 mb-12">
               {project.demoLink && (
-                <Button variant="hero" size="lg" asChild>
+                <Button variant="hero" size="lg" className="px-6 py-2.5 text-sm h-auto" asChild>
                   <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-5 w-5" />
+                    <ExternalLink className="mr-1.5 h-4 w-4" />
                     View Demo
                   </a>
                 </Button>
               )}
               {project.githubLink1 && (
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="lg" className="px-6 py-2.5 text-sm h-auto border-[#d2d2d7] bg-white text-[#1d1d1f] hover:bg-[#f5f5f7]" asChild>
                   <a href={project.githubLink1} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-5 w-5" />
+                    <Github className="mr-1.5 h-4 w-4" />
                     View Code
                   </a>
                 </Button>
@@ -77,12 +77,12 @@ const ProjectDetail = () => {
 
             {/* Technologies */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold mb-4">Technologies Used</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-lg font-bold mb-4 text-[#1d1d1f]">Technologies Used</h3>
+              <div className="flex flex-wrap gap-2.5">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium border border-accent/20"
+                    className="px-4 py-2 bg-white text-[#1d1d1f] rounded-full text-xs font-semibold border border-[#e0e0e0] shadow-[0_2px_8px_rgba(0,0,0,0.01)]"
                   >
                     {tech}
                   </span>
@@ -102,11 +102,11 @@ const ProjectDetail = () => {
             className="mt-16 text-center"
           >
             <Button 
-              variant="hero" 
-              size="lg"
+              variant="outline" 
+              className="px-6 py-2.5 text-sm h-auto gap-2 border-[#d2d2d7] bg-white text-[#1d1d1f] hover:bg-[#f5f5f7]"
               onClick={() => navigate('/')}
             >
-              <ArrowLeft className="mr-2 h-4 w-4" />
+              <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Button>
           </motion.div>
@@ -114,9 +114,9 @@ const ProjectDetail = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card/30 backdrop-blur-sm border-t border-border/50 py-8">
+      <footer className="bg-white border-t border-[#e0e0e0] py-8">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs text-[#86868b]">
             © {new Date().getFullYear()} Chamal Fernando. All rights reserved.
           </p>
         </div>

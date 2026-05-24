@@ -5,7 +5,7 @@ const Skills = () => {
   const categories = ['Frontend', 'Backend', 'Database', 'Tools', 'Mobile'] as const;
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-24 bg-[#161617] text-white overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,10 +14,10 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 text-[#ffffff] tracking-apple-tight">
             Technical Skills
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-[#a1a1a6] max-w-2xl mx-auto font-normal">
             Comprehensive expertise across modern web and mobile development technologies
           </p>
         </motion.div>
@@ -30,9 +30,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-card/70 transition-all duration-300 border border-border/50"
+              className="bg-[#222223] border border-[#2d2d30] rounded-[18px] p-8 transition-transform hover:scale-[1.01] duration-300 shadow-none"
             >
-              <h3 className="text-2xl font-semibold mb-6 text-accent">{category}</h3>
+              <h3 className="text-xl font-bold mb-6 text-[#f5f5f7]">{category}</h3>
               
                 <div className="space-y-3">
                 {skills
@@ -40,7 +40,7 @@ const Skills = () => {
                   .map((skill, index) => (
                     <motion.div 
                       key={skill.name} 
-                      className="px-4 py-3 bg-muted/30 rounded-lg hover:bg-accent/10 transition-colors duration-300 border border-border/30 flex items-center gap-3"
+                      className="px-4 py-3 bg-[#2a2a2c] rounded-[11px] hover:bg-[#333333] transition-colors duration-200 border border-[#3a3a3c] flex items-center gap-3"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ 
@@ -49,8 +49,8 @@ const Skills = () => {
                       }}
                       viewport={{ once: true }}
                     >
-                      <span className="text-2xl">{skill.icon}</span>
-                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-xl">{skill.icon}</span>
+                      <span className="font-medium text-[#f5f5f7] text-sm">{skill.name}</span>
                     </motion.div>
                   ))}
               </div>

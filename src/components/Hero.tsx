@@ -16,20 +16,10 @@ const Hero = () => {
   ];
   const currentTitle = useTypewriter(titles, 100, 80, 2000);
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Background with gradient overlay */}
-      <div className="absolute inset-0 bg-hero-gradient opacity-20" />
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-10"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-[#ffffff] text-[#1d1d1f]">
+      {/* Background Subtle Canvas */}
+      <div className="absolute inset-0 bg-[#f5f5f7] opacity-60" />
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-1s' }} />
-      </div>
-
       {/* Main content */}
       <div className="container mx-auto px-6 text-center z-10">
         <motion.div
@@ -45,7 +35,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <div className="w-60 h-60 md:w-50 md:h-50 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
+            <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden border border-[#d2d2d7] shadow-[0_15px_30px_rgba(0,0,0,0.05)] bg-[#ffffff]">
               <img 
                 src={profileImage} 
                 alt="Profile" 
@@ -55,7 +45,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent min-h-[1.2em]"
+            className="font-display text-5xl md:text-7xl font-bold mb-6 text-[#1d1d1f] tracking-apple-hero min-h-[1.2em]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -65,13 +55,13 @@ const Hero = () => {
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-[#86868b] mb-10 leading-relaxed font-normal max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             Computer Science Graduate from University of Colombo School of Computing, passionate about creating 
-            innovative software {/*web and mobile*/} solutions with modern technologies
+            innovative software solutions with modern technologies
           </motion.p>
 
           <motion.div 
@@ -81,27 +71,24 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Link to="/work-experience">
-              <Button variant="hero" size="lg" className="group">
+              <Button variant="hero" size="lg" className="px-6 py-2.5 text-sm h-auto">
                 Professional Experience
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>
-            <a href="/cv.txt" download>
-              <Button variant="hero" size="lg" className="group">
-                <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Download CV
-              </Button>
-            </a>
             <Link to="/certifications">
-              <Button variant="hero" size="lg" className="group">
+              <Button variant="outline" size="lg" className="px-6 py-2.5 text-sm h-auto">
                 My Certifications
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
+            <a href="/cv.txt" download className="text-[#0066cc] hover:underline flex items-center gap-1 text-sm font-normal py-2 px-4">
+              <Download className="h-4 w-4" />
+              Download CV
+            </a>
           </motion.div>
 
           <motion.div 
-            className="flex justify-center space-x-6 pb-20 sm:pb-0"
+            className="flex justify-center space-x-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -109,17 +96,17 @@ const Hero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer" 
-              href="https://github.com/Chamalfernando" className="p-3 rounded-full bg-card/50 backdrop-blur-sm hover:bg-accent/20 transition-all duration-300 hover:scale-110">
-              <Github className="h-6 w-6" />
+              href="https://github.com/Chamalfernando" className="p-2.5 rounded-full bg-white border border-[#e0e0e0] hover:bg-[#f5f5f7] hover:border-[#d2d2d7] text-[#1d1d1f] transition-all duration-200 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:scale-105">
+              <Github className="h-5 w-5" />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer" 
-              href="https://linkedin.com/in/chamal-fernando" className="p-3 rounded-full bg-card/50 backdrop-blur-sm hover:bg-accent/20 transition-all duration-300 hover:scale-110">
-              <Linkedin className="h-6 w-6" />
+              href="https://linkedin.com/in/chamal-fernando" className="p-2.5 rounded-full bg-white border border-[#e0e0e0] hover:bg-[#f5f5f7] hover:border-[#d2d2d7] text-[#1d1d1f] transition-all duration-200 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:scale-105">
+              <Linkedin className="h-5 w-5" />
             </a>
-            <a href="mailto:chamaldeshitha2001@gmail.com" className="p-3 rounded-full bg-card/50 backdrop-blur-sm hover:bg-accent/20 transition-all duration-300 hover:scale-110">
-              <Mail className="h-6 w-6" />
+            <a href="mailto:chamaldeshitha2001@gmail.com" className="p-2.5 rounded-full bg-white border border-[#e0e0e0] hover:bg-[#f5f5f7] hover:border-[#d2d2d7] text-[#1d1d1f] transition-all duration-200 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:scale-105">
+              <Mail className="h-5 w-5" />
             </a>
           </motion.div>
         </motion.div>
@@ -132,8 +119,8 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <div className="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-accent rounded-full mt-2 animate-bounce" />
+        <div className="w-6 h-10 border-2 border-[#86868b]/40 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-[#86868b]/60 rounded-full mt-2 animate-bounce" />
         </div>
       </motion.div>
     </section>
