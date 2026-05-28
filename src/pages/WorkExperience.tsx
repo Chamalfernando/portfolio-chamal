@@ -7,123 +7,145 @@ import workspace1 from '@/assets/workspace-1.jpg';
 import workspace2 from '@/assets/workspace-2.jpg';
 
 const WorkExperience = () => {
+  // Helper to map experiences to professional tags
+  const getExperienceLevel = (title: string) => {
+    if (title.toLowerCase().includes('associate')) {
+      return 'Full-Time Role';
+    }
+    return 'Internship Role';
+  };
+
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <main className="min-h-screen bg-sb-cream text-sb-house font-sans">
+      
+      {/* Navigation - Professional Top-bar Style */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-sb-border/40 shadow-sm">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link to="/">
-            <Button variant="ghost" size="sm" className="gap-2">
+            <Button variant="ghost" size="sm" className="gap-2 text-sb-accent hover:text-sb-house hover:bg-sb-ceramic/30 font-semibold">
               <Home className="w-4 h-4" />
               Home
             </Button>
           </Link>
-          {/* <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Work Experience
-          </h1> */}
-          <div className="w-20" /> {/* Spacer for alignment */}
+          <div className="w-20" />
         </div>
       </nav>
 
       {/* Content */}
-      <div className="pt-24 pb-20">
+      <div className="pt-28 pb-20">
         <div className="container mx-auto px-6">
+          
+          {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16 max-w-2xl mx-auto"
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight pb-2">
-              Professional Experience
+            <span className="font-cursive text-sb-accent text-2xl rotate-[-1deg] inline-block mb-2">Professional Journey 🌟</span>
+            <h2 className="text-4xl md:text-5xl font-bold font-serif tracking-tight text-sb-house mb-6 leading-tight">
+              Work Experience
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Documenting my industrial experience and professional growth in software development
+            <p className="text-base md:text-lg text-sb-text-black-soft">
+              A detailed timeline of my software engineering career and professional growth milestones.
             </p>
           </motion.div>
 
-          {/* Workspace Images Section */}
+          {/* Workspace Gallery */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-20"
+            className="mb-16"
           >
-            {/* <h3 className="text-3xl font-bold mb-8 text-center text-accent">Current Workspace</h3> */}
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all overflow-hidden">
+            <h3 className="text-lg font-bold font-serif mb-6 text-center text-sb-green">Workplace Environments</h3>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white rounded-3xl p-4 border border-sb-border/40 shadow-sb-card overflow-hidden hover:rotate-[0.5deg] transition-transform">
                 <img 
                   src={workspace1} 
                   alt="Professional workspace setup 1" 
-                  className="aspect-video rounded-lg object-cover w-full"
+                  className="aspect-video rounded-2xl object-cover w-full"
                 />
               </div>
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all overflow-hidden">
+              <div className="bg-white rounded-3xl p-4 border border-sb-border/40 shadow-sb-card overflow-hidden hover:rotate-[-0.5deg] transition-transform">
                 <img 
                   src={workspace2} 
                   alt="Professional workspace setup 2" 
-                  className="aspect-video rounded-lg object-cover w-full"
+                  className="aspect-video rounded-2xl object-cover w-full"
                 />
               </div>
             </div>
           </motion.div>
 
           {/* Work Experience Timeline */}
-          <div className="max-w-4xl mx-auto">
-            {workExperiences.map((experience, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="relative pl-8 pb-12 border-l-2 border-accent/30 last:pb-0"
-              >
-                <div className="absolute left-[-13px] top-0 w-6 h-6 rounded-full bg-accent border-4 border-background" />
-                
-                <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-card/70 transition-all duration-300 border border-border/50 hover:border-accent/50 hover:shadow-glow-accent">
-                  <div className="flex items-start justify-between mb-6 flex-wrap gap-4">
+          <div className="max-w-3xl mx-auto">
+            {workExperiences.map((experience, index) => {
+              const roleTag = getExperienceLevel(experience.title);
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="relative pl-8 pb-12 border-l-2 border-sb-green/20 last:pb-0"
+                >
+                  {/* Timeline Node - Accent Green */}
+                  <div className="absolute left-[-11px] top-0 w-6 h-6 rounded-full bg-sb-accent border-4 border-white flex items-center justify-center text-[10px] text-white font-bold" />
+                  
+                  <div className="bg-white rounded-3xl p-8 border border-sb-border/40 shadow-sb-card hover:shadow-md transition-shadow">
+                    <div className="flex items-start justify-between mb-6 flex-wrap gap-4">
+                      <div>
+                        {/* Role Level Tag */}
+                        <div className="mb-2 inline-flex items-center gap-1 bg-sb-light text-sb-accent text-xs font-bold px-3 py-1 rounded-full border border-sb-accent/15 shadow-sm">
+                          {roleTag}
+                        </div>
+                        
+                        <h3 className="text-2xl md:text-3xl font-bold font-serif text-sb-house flex items-center gap-2.5">
+                          <Briefcase className="w-6 h-6 text-sb-green" />
+                          {experience.title}
+                        </h3>
+                        <p className="text-lg text-sb-accent font-semibold">{experience.company}</p>
+                        <p className="text-xs text-sb-text-black-soft font-bold uppercase tracking-widest mt-1.5">{experience.duration}</p>
+                      </div>
+                    </div>
+                    
+                    <p className="text-sm text-sb-house mb-6 leading-relaxed border-l-2 border-sb-light pl-4 italic">
+                      {experience.description}
+                    </p>
+                    
+                    {/* Responsibilities */}
+                    <div className="mb-6">
+                      <h4 className="font-bold font-serif text-base mb-3 text-sb-green">Key Responsibilities:</h4>
+                      <ul className="space-y-3">
+                        {experience.responsibilities.map((resp, idx) => (
+                          <li key={idx} className="flex items-start gap-2.5 text-xs text-sb-text-black-soft leading-relaxed">
+                            <span className="text-sb-accent font-bold mt-0.5">•</span>
+                            <span>{resp}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* Technologies Used */}
                     <div>
-                      <h3 className="text-3xl font-bold text-accent mb-2 flex items-center gap-2">
-                        <Briefcase className="w-7 h-7" />
-                        {experience.title}
-                      </h3>
-                      <p className="text-xl text-foreground font-semibold">{experience.company}</p>
-                      <p className="text-muted-foreground mt-1">{experience.duration}</p>
+                      <h4 className="font-bold font-serif text-base mb-3 text-sb-green">Technologies Used:</h4>
+                      <div className="flex flex-wrap gap-1.5">
+                        {experience.technologies.map((tech, idx) => (
+                          <span 
+                            key={idx}
+                            className="px-2.5 py-1 bg-sb-cream text-sb-house rounded-full text-xs font-semibold border border-sb-border/50 shadow-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  
-                  <p className="text-foreground text-lg mb-6 leading-relaxed">{experience.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-bold text-lg mb-3 text-accent">Key Responsibilities:</h4>
-                    <ul className="space-y-2">
-                      {experience.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <span className="text-accent mt-1.5">▸</span>
-                          <span className="text-foreground">{resp}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-bold text-lg mb-3 text-accent">Technologies Used:</h4>
-                    <div className="flex flex-wrap gap-3">
-                      {experience.technologies.map((tech, idx) => (
-                        <span 
-                          key={idx}
-                          className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm border border-accent/20"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Back Button */}
@@ -134,8 +156,8 @@ const WorkExperience = () => {
             className="text-center mt-16"
           >
             <Link to="/">
-              <Button variant="outline" size="lg" className="gap-2">
-                <ArrowLeft className="w-5 h-5" />
+              <Button variant="sbOutline" size="lg" className="gap-2">
+                <ArrowLeft className="w-4 h-4" />
                 Back to Home
               </Button>
             </Link>
@@ -143,12 +165,10 @@ const WorkExperience = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-card/30 backdrop-blur-sm border-t border-border/50 py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Chamal Fernando. All rights reserved.
-          </p>
+      {/* Simple Footer */}
+      <footer className="bg-sb-house border-t border-sb-house/20 py-8 text-center text-xs text-sb-text-white-soft">
+        <div className="container mx-auto px-6">
+          <p>© {new Date().getFullYear()} Chamal Fernando. All rights reserved.</p>
         </div>
       </footer>
     </main>

@@ -198,7 +198,8 @@ export const skills: Skill[] = [
   // Tools
   { name: "Git", category: "Tools", icon: "🔀" },
   { name: "GitHub", category: "Tools", icon: "🐙" },
-  { name: "Swagger", category: "Tools", icon: "📋" },
+  { name: "Swagger Docs", category: "Tools", icon: "📋" },
+  { name: "Scalar Docs", category: "Tools", icon: "📄" },
   { name: "Postman", category: "Tools", icon: "📮" },
   { name: "Docker", category: "Tools", icon: "🐳" },
   

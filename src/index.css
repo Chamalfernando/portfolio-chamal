@@ -1,123 +1,107 @@
-/* Modern Portfolio Design System - Professional Dark Theme with Vibrant Accents */
+/* Starbucks Visual Theme & User Experience Design System */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Kalam:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
-    /* Core Colors - Professional Dark Theme */
-    --background: 220 26% 6%;
-    --foreground: 210 40% 98%;
+    /* Core Starbucks Palette as HSL values */
+    --background: 40 13% 93%; /* #f2f0eb - Warm cream canvas */
+    --foreground: 0 0% 0% / 0.87; /* Text Black */
 
-    --card: 220 26% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 0% / 0.87;
 
-    --popover: 220 26% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 98%; /* Neutral Cool */
+    --popover-foreground: 0 0% 0% / 0.87;
 
-    /* Primary - Deep Professional Blue */
-    --primary: 217 91% 35%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 217 91% 55%;
+    /* Primary - Starbucks Green (#006241) */
+    --primary: 160 100% 19%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Elegant Gray */
-    --secondary: 220 26% 12%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary - Ceramic (#edebe9) */
+    --secondary: 30 6% 92%;
+    --secondary-foreground: 0 0% 0% / 0.87;
 
-    /* Muted - Subtle Backgrounds */
-    --muted: 220 26% 10%;
-    --muted-foreground: 215 20% 65%;
+    /* Muted */
+    --muted: 30 6% 95%;
+    --muted-foreground: 0 0% 0% / 0.58; /* Text Black Soft */
 
-    /* Accent - Vibrant Cyan */
-    --accent: 187 85% 53%;
-    --accent-foreground: 220 26% 6%;
-    --accent-glow: 187 85% 70%;
+    /* Accent - Green Accent (#00754A) */
+    --accent: 158 100% 23%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Success - Modern Green */
-    --success: 142 76% 36%;
-    --success-foreground: 210 40% 98%;
+    /* Success - Starbucks Green */
+    --success: 160 100% 19%;
+    --success-foreground: 0 0% 100%;
 
-    /* Warning - Vibrant Orange */
-    --warning: 32 95% 44%;
-    --warning-foreground: 220 26% 6%;
+    /* Warning - Gold (#cba258) */
+    --warning: 39 52% 57%;
+    --warning-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - Red (#c82014) */
+    --destructive: 4 82% 43%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 26% 15%;
-    --input: 220 26% 12%;
-    --ring: 187 85% 53%;
+    --border: 30 6% 85%;
+    --input: 30 6% 92%;
+    --ring: 158 100% 23%;
 
-    --radius: 0.75rem;
+    --radius: 12px;
 
-    /* Portfolio Specific Colors */
-    --hero-gradient: linear-gradient(135deg, hsl(217 91% 35%), hsl(187 85% 53%));
-    --card-gradient: linear-gradient(135deg, hsl(220 26% 8% / 0.8), hsl(220 26% 12% / 0.6));
-    --accent-gradient: linear-gradient(135deg, hsl(187 85% 53%), hsl(280 100% 70%));
-    --glow-primary: 0 0 40px hsl(217 91% 35% / 0.3);
-    --glow-accent: 0 0 40px hsl(187 85% 53% / 0.3);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Hex Custom Values for Custom Utilities */
+    --starbucks-green: #006241;
+    --green-accent: #00754A;
+    --house-green: #1E3932;
+    --green-uplift: #2b5148;
+    --green-light: #d4e9e2;
+    --gold: #cba258;
+    --gold-light: #dfc49d;
+    --gold-lightest: #faf6ee;
+    --neutral-warm: #f2f0eb;
+    --ceramic: #edebe9;
+    --text-black: rgba(0, 0, 0, 0.87);
+    --text-black-soft: rgba(0, 0, 0, 0.58);
+    --text-white: rgba(255, 255, 255, 1);
+    --text-white-soft: rgba(255, 255, 255, 0.70);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Transition & Micro-Interactions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --button-active-scale: scale(0.95);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode behaves like an espresso bar - rich dark green textures */
+    --background: 168 31% 17%; /* House Green #1E3932 */
+    --foreground: 0 0% 100% / 0.90; /* Text White Soft */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 169 33% 24%; /* Green Uplift #2b5148 */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 168 31% 17%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 158 100% 23%; /* Accent Green */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 160 100% 19%; /* Starbucks Green */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 168 31% 14%;
+    --muted-foreground: 0 0% 100% / 0.70;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 39 52% 57%; /* Gold #cba258 */
+    --accent-foreground: 168 31% 17%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 4 82% 43%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 169 33% 20%;
+    --input: 169 33% 20%;
+    --ring: 39 52% 57%;
   }
 }
 

@@ -12,10 +12,10 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-          <Button onClick={() => navigate('/')}>
+      <div className="min-h-screen bg-sb-cream flex items-center justify-center font-sans">
+        <div className="text-center bg-white p-8 rounded-3xl border border-sb-border/40 shadow-sb-card">
+          <h1 className="text-3xl font-serif font-bold text-sb-house mb-4">Recipe Not Found</h1>
+          <Button variant="sbFilled" onClick={() => navigate('/')}>
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
@@ -25,64 +25,68 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Navigation Bar */}
-      <nav className="fixed top-0 w-full bg-card/80 backdrop-blur-md border-b border-border z-50">
-        <div className="container mx-auto px-6 py-4">
+    <main className="min-h-screen bg-sb-cream text-sb-house font-sans pb-20">
+      {/* Navigation Bar - Starbucks style */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-sb-border/40 shadow-sm">
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Button 
             variant="ghost" 
-            onClick={() => navigate('/')}
-            className="group"
+            size="sm"
+            onClick={() => navigate(`/#project-${project.slug}`)}
+            className="gap-2 text-sb-accent hover:text-sb-house hover:bg-sb-ceramic/30 font-semibold"
           >
             <Home className="h-4 w-4" />
             Home
           </Button>
+          <div className="w-20" />
         </div>
       </nav>
 
       {/* Project Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+      <section className="pt-28 pb-16 px-6">
+        <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="bg-white rounded-3xl p-8 md:p-12 border border-sb-border/40 shadow-sb-card mb-8"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-xs font-bold uppercase tracking-widest text-sb-accent mb-2 block">Case Study</span>
+            <h1 className="text-4xl md:text-5xl font-bold font-serif text-sb-house mb-4">
               {project.title}
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
+            <p className="text-base md:text-lg text-sb-text-black-soft mb-8 leading-relaxed">
               {project.description}
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 mb-12">
+            <div className="flex flex-wrap gap-3 mb-10 pb-6 border-b border-sb-border/30">
               {project.demoLink && (
-                <Button variant="hero" size="lg" asChild>
+                <Button variant="sbFilled" size="lg" asChild>
                   <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-5 w-5" />
-                    View Demo
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Live Demo
                   </a>
                 </Button>
               )}
               {project.githubLink1 && (
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="sbOutline" size="lg" asChild>
                   <a href={project.githubLink1} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-5 w-5" />
-                    View Code
+                    <Github className="mr-2 h-4 w-4" />
+                    Source Code
                   </a>
                 </Button>
               )}
             </div>
 
             {/* Technologies */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-semibold mb-4">Technologies Used</h3>
-              <div className="flex flex-wrap gap-3">
+            <div className="mb-6">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-sb-text-black-soft mb-3">Technologies:</h3>
+              <div className="flex flex-wrap gap-1.5">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium border border-accent/20"
+                    className="px-3 py-1 bg-sb-cream text-sb-house rounded-full text-xs font-semibold border border-sb-border/50 shadow-sm"
                   >
                     {tech}
                   </span>
@@ -91,20 +95,22 @@ const ProjectDetail = () => {
             </div>
           </motion.div>
 
-          {/* Dynamic Project Content - Renders custom component per slug */}
-          <ProjectDetailContent project={project} />
+          {/* Dynamic Project Content */}
+          <div className="bg-white rounded-3xl p-8 md:p-12 border border-sb-border/40 shadow-sb-card">
+            <ProjectDetailContent project={project} />
+          </div>
 
           {/* Bottom Navigation */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-16 text-center"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-12 text-center"
           >
             <Button 
-              variant="hero" 
+              variant="sbOutline" 
               size="lg"
-              onClick={() => navigate('/')}
+              onClick={() => navigate(`/#project-${project.slug}`)}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
@@ -113,15 +119,13 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-card/30 backdrop-blur-sm border-t border-border/50 py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Chamal Fernando. All rights reserved.
-          </p>
+      {/* Mini Footer */}
+      <footer className="bg-sb-house border-t border-sb-house/20 py-8 text-center text-xs text-sb-text-white-soft">
+        <div className="container mx-auto px-6">
+          <p>© {new Date().getFullYear()} Chamal Fernando. All rights reserved.</p>
         </div>
       </footer>
-    </div>
+    </main>
   );
 };
 

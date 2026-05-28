@@ -68,16 +68,16 @@ const AcademicTranscript = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-background text-foreground relative overflow-hidden">
+    <main className="min-h-screen bg-sb-cream text-sb-house font-sans relative overflow-hidden">
       {/* Multiple Security Watermarks - These will appear in any screenshot */}
-      <div className="fixed inset-0 pointer-events-none z-40 opacity-10">
+      <div className="fixed inset-0 pointer-events-none z-40 opacity-[0.07]">
         <div className="absolute inset-0 flex items-center justify-center transform rotate-[-45deg]">
           <p className="text-9xl font-bold text-destructive">CONFIDENTIAL</p>
         </div>
       </div>
       
       {/* Additional watermark layer */}
-      <div className="fixed inset-0 pointer-events-none z-40 opacity-5">
+      <div className="fixed inset-0 pointer-events-none z-40 opacity-[0.03]">
         <div className="absolute top-1/4 left-1/4 transform rotate-[-30deg]">
           <p className="text-6xl font-bold text-destructive">PROTECTED DOCUMENT</p>
         </div>
@@ -87,70 +87,69 @@ const AcademicTranscript = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-sb-border/40 shadow-sm">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link to="/">
-            <Button variant="ghost" size="sm" className="gap-2">
+            <Button variant="ghost" size="sm" className="gap-2 text-sb-accent hover:text-sb-house hover:bg-sb-ceramic/30 font-semibold">
               <Home className="w-4 h-4" />
               Home
             </Button>
           </Link>
-          {/* <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Academic Transcript
-          </h1> */}
           <div className="w-20" />
         </div>
       </nav>
 
       {/* Content */}
-      <div className="pt-24 pb-20">
+      <div className="pt-28 pb-20">
         <div className="container mx-auto px-6 max-w-4xl">
+          
+          {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-3 bg-destructive/10 text-destructive px-6 py-3 rounded-full mb-6 border border-destructive/30">
-              <ShieldAlert className="w-5 h-5" />
-              <span className="font-semibold">Protected Document</span>
+            <div className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-5 py-2 rounded-full mb-6 border border-destructive/20 text-xs font-bold uppercase tracking-wider">
+              <ShieldAlert className="w-4 h-4" />
+              <span>Protected Document</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold font-serif tracking-tight text-sb-house mb-3">
               Academic Transcript
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base md:text-lg text-sb-text-black-soft font-semibold">
               University of Colombo School of Computing
             </p>
           </motion.div>
 
-          {/* Transcript Content */}
+          {/* Transcript Content Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 relative"
+            className="bg-white rounded-3xl p-6 md:p-8 border border-sb-border/40 shadow-sb-card relative"
           >
             {/* Watermark overlay on content */}
-            <div className="absolute inset-0 pointer-events-none opacity-5 flex items-center justify-center">
-              <p className="text-6xl font-bold transform rotate-[-30deg]">CONFIDENTIAL</p>
+            <div className="absolute inset-0 pointer-events-none opacity-[0.03] flex items-center justify-center">
+              <p className="text-7xl font-bold transform rotate-[-30deg]">CONFIDENTIAL</p>
             </div>
 
             {/* Transcript image */}
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl border border-sb-border/30">
               <img 
                 src={transcriptImage} 
                 alt="Academic Transcript" 
-                className="w-full rounded-lg shadow-lg"
+                className="w-full h-auto shadow-sm"
               />
             </div>
 
             {/* Security Notice */}
-            <div className="mt-6 p-4 bg-destructive/5 rounded-lg border border-destructive/20">
-              <p className="text-sm text-muted-foreground text-center">
-                <ShieldAlert className="inline-block w-4 h-4 mr-2" />
-                This document is view-only and protected from unauthorized copying, or printing.
+            <div className="mt-6 p-4 bg-destructive/5 rounded-2xl border border-destructive/10">
+              <p className="text-xs text-sb-text-black-soft text-center flex items-center justify-center gap-2">
+                <ShieldAlert className="w-4 h-4 text-destructive" />
+                <span>This document is view-only and protected from unauthorized copying, or printing.</span>
               </p>
             </div>
           </motion.div>
@@ -163,8 +162,8 @@ const AcademicTranscript = () => {
             className="text-center mt-12"
           >
             <Link to="/">
-              <Button variant="outline" size="lg" className="gap-2">
-                <ArrowLeft className="w-5 h-5" />
+              <Button variant="sbOutline" size="lg" className="gap-2">
+                <ArrowLeft className="w-4 h-4" />
                 Back to Home
               </Button>
             </Link>
@@ -172,12 +171,10 @@ const AcademicTranscript = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-card/30 backdrop-blur-sm border-t border-border/50 py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Chamal Fernando. All rights reserved.
-          </p>
+      {/* Simple Footer */}
+      <footer className="bg-sb-house border-t border-sb-house/20 py-8 text-center text-xs text-sb-text-white-soft">
+        <div className="container mx-auto px-6">
+          <p>© {new Date().getFullYear()} Chamal Fernando. All rights reserved.</p>
         </div>
       </footer>
     </main>

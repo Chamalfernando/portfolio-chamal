@@ -6,10 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ProjectDetail from "./pages/ProjectDetail";
 import WorkExperience from "./pages/WorkExperience";
-import AcademicTranscript from "./pages/AcademicTranscript";
+// import AcademicTranscript from "./pages/AcademicTranscript";
 import NotFound from "./pages/NotFound";
 import ScrollToTopOnNavigate from "./components/ScrollToTopOnNavigate";
 import Certifications from "./pages/Certifications";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +27,9 @@ const App = () => (
           <Route path="/project/:slug" element={<ProjectDetail />} />
           <Route path="/work-experience" element={<WorkExperience />} />
           <Route path="/certifications" element={<Certifications />} />
-          {/* <Route path="/academic-transcript" element={<AcademicTranscript />} /> */}{/* COMMENT */}
+          {/* <Route path="/academic-transcript" element={<AcademicTranscript />} /> */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

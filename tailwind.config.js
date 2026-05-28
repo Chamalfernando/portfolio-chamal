@@ -71,7 +71,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom Starbucks Colors
+				'sb-green': 'var(--starbucks-green)',
+				'sb-accent': 'var(--green-accent)',
+				'sb-house': 'var(--house-green)',
+				'sb-uplift': 'var(--green-uplift)',
+				'sb-light': 'var(--green-light)',
+				'sb-gold': 'var(--gold)',
+				'sb-gold-light': 'var(--gold-light)',
+				'sb-gold-lightest': 'var(--gold-lightest)',
+				'sb-cream': 'var(--neutral-warm)',
+				'sb-ceramic': 'var(--ceramic)',
+				'sb-text-black': 'var(--text-black)',
+				'sb-text-black-soft': 'var(--text-black-soft)',
+				'sb-text-white': 'var(--text-white)',
+				'sb-text-white-soft': 'var(--text-white-soft)',
 			},
 			backgroundImage: {
 				'hero-gradient': 'var(--hero-gradient)',
@@ -81,10 +96,16 @@ export default {
 			boxShadow: {
 				'glow-primary': 'var(--glow-primary)',
 				'glow-accent': 'var(--glow-accent)',
-				'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+				'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+				'sb-card': '0px 0px 0.5px 0px rgba(0,0,0,0.14), 0px 1px 1px 0px rgba(0,0,0,0.24)',
+				'sb-nav': '0 1px 3px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.06), 0 0 2px rgba(0,0,0,0.07)',
+				'sb-frap': '0 0 6px rgba(0,0,0,0.24), 0 8px 12px rgba(0,0,0,0.14)',
+				'sb-frap-active': '0 0 6px rgba(0,0,0,0.24)',
 			},
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'serif': ['Lora', 'Georgia', 'serif'],
+				'cursive': ['Kalam', 'Comic Sans MS', 'cursive'],
 			},
 			backdropBlur: {
 				'glass': '12px'
