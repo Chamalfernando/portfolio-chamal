@@ -72,7 +72,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Computer Science Graduate from the University of Colombo School of Computing with 1+ years of hands-on experience in software engineering in the FinTech domain. Dedicated to building robust, scalable enterprise solutions.
+              Computer Science Graduate from the University of Colombo School of Computing with 1.5+ years of hands-on experience in software engineering in the FinTech domain. Dedicated to building robust, scalable enterprise solutions.
             </motion.p>
 
             {/* CTA Buttons */}
