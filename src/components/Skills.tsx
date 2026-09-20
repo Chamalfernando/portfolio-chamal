@@ -47,7 +47,7 @@ const Skills = () => {
   };
 
   return (
-    <section className="py-20 bg-sb-ceramic/40 border-t border-sb-border/40">
+    <section id="skills" className="py-20 bg-sb-ceramic/40 border-t border-sb-border/40">
       <div className="container mx-auto px-6">
         
         {/* Section Header */}

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Home, Briefcase, ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { workExperiences } from '@/data/portfolio';
 import workspace1 from '@/assets/workspace-1.jpg';
@@ -18,21 +18,21 @@ const WorkExperience = () => {
   return (
     <main className="min-h-screen bg-sb-cream text-sb-house font-sans">
       
-      {/* Navigation - Professional Top-bar Style */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-sb-border/40 shadow-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link to="/">
-            <Button variant="ghost" size="sm" className="gap-2 text-sb-accent hover:text-sb-house hover:bg-sb-ceramic/30 font-semibold">
-              <Home className="w-4 h-4" />
-              Home
-            </Button>
+      {/* Navigation Header */}
+      <nav className="w-full bg-white/70 backdrop-blur-md border-b border-sb-border/20 sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2 group text-sb-house font-bold font-sans">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            Back to Home
           </Link>
-          <div className="w-20" />
+          <div className="font-cursive text-sb-accent text-xl font-bold rotate-[-1deg]">
+            Work Experience
+          </div>
         </div>
       </nav>
 
       {/* Content */}
-      <div className="pt-28 pb-20">
+      <div className="pt-12 pb-20">
         <div className="container mx-auto px-6">
           
           {/* Page Header */}

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const Education = () => {
   return (
-    <section className="py-20 bg-sb-gold-lightest border-t border-sb-border/40">
+    <section id="education" className="py-20 bg-sb-gold-lightest border-t border-sb-border/40">
       <div className="container mx-auto px-6">
         
         {/* Section Title */}

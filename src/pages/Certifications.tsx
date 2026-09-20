@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, ExternalLink, Calendar, Award } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { certificationCategories } from '@/data/portfolio';
 
@@ -19,21 +19,21 @@ const Certifications = () => {
   return (
     <main className="min-h-screen bg-sb-cream text-sb-house font-sans pb-20">
       
-      {/* Navigation Bar - Professional style */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-sb-border/40 shadow-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link to="/">
-            <Button variant="ghost" size="sm" className="gap-2 text-sb-accent hover:text-sb-house hover:bg-sb-ceramic/30 font-semibold">
-              <Home className="h-4 w-4" />
-              Home
-            </Button>
+      {/* Navigation Header */}
+      <nav className="w-full bg-white/70 backdrop-blur-md border-b border-sb-border/20 sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2 group text-sb-house font-bold font-sans">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            Back to Home
           </Link>
-          <div className="w-20" />
+          <div className="font-cursive text-sb-accent text-xl font-bold rotate-[-1deg]">
+            Certifications
+          </div>
         </div>
       </nav>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 pt-28">
+      <div className="container mx-auto px-6 pt-12">
         
         {/* Page Header */}
         <motion.div

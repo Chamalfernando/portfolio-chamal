@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Skills from '@/components/Skills';
 import Education from '@/components/Education';
@@ -11,6 +12,7 @@ import FloatingFrap from '@/components/FloatingFrap';
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground font-sans">
+      <Navbar />
       <Hero />
       <Skills />
       <Education />

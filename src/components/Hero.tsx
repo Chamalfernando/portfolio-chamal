@@ -16,7 +16,7 @@ const Hero = () => {
   const currentTitle = useTypewriter(titles, 100, 80, 2000);
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-sb-cream pt-20">
+    <section id="hero" className="min-h-screen relative flex items-center justify-center overflow-hidden bg-sb-cream pt-20">
       {/* Background blocks matching clean café/office design */}
       <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-sb-house hidden lg:block z-0" />
       

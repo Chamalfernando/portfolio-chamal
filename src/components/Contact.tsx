@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-sb-cream/40 border-t border-sb-border/40">
+    <section id="contact" className="py-20 bg-sb-cream/40 border-t border-sb-border/40">
       <div className="container mx-auto px-6">
         
         {/* Section Title */}
