@@ -1,7 +1,7 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ExternalLink, Github, Home } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { projects } from '@/data/portfolio';
 import ProjectDetailContent from '@/components/projects/ProjectDetailContent';
 
@@ -26,72 +26,90 @@ const ProjectDetail = () => {
 
   return (
     <main className="min-h-screen bg-sb-cream text-sb-house font-sans pb-20">
-      {/* Navigation Bar - Starbucks style */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-sb-border/40 shadow-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Button 
-            variant="ghost" 
-            size="sm"
-            onClick={() => navigate(`/#project-${project.slug}`)}
-            className="gap-2 text-sb-accent hover:text-sb-house hover:bg-sb-ceramic/30 font-semibold"
+      {/* Navigation Header */}
+      <nav className="w-full bg-white/70 backdrop-blur-md border-b border-sb-border/20 sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <Link 
+            to={`/#project-${project.slug}`} 
+            className="flex items-center gap-2 group text-sb-house font-bold font-sans"
           >
-            <Home className="h-4 w-4" />
-            Home
-          </Button>
-          <div className="w-20" />
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            Back to Home
+          </Link>
+          <div className="font-cursive text-sb-accent text-xl font-bold rotate-[-1deg]">
+            Project Details
+          </div>
         </div>
       </nav>
 
-      {/* Project Hero Section */}
-      <section className="pt-28 pb-16 px-6">
-        <div className="container mx-auto max-w-4xl">
+      {/* Main Content */}
+      <div className="pt-12 pb-20">
+        <div className="container mx-auto px-6 max-w-4xl">
+          
+          {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-3xl p-8 md:p-12 border border-sb-border/40 shadow-sb-card mb-8"
+            className="text-center mb-16 max-w-3xl mx-auto"
           >
-            <span className="text-xs font-bold uppercase tracking-widest text-sb-accent mb-2 block">Case Study</span>
-            <h1 className="text-4xl md:text-5xl font-bold font-serif text-sb-house mb-4">
+            <span className="font-cursive text-sb-accent text-2xl rotate-[-1deg] inline-block mb-2">
+              Case Study ☕
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold font-serif tracking-tight text-sb-house mb-6 leading-tight">
               {project.title}
             </h1>
-            <p className="text-base md:text-lg text-sb-text-black-soft mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-sb-text-black-soft leading-relaxed">
               {project.description}
             </p>
+          </motion.div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-3 mb-10 pb-6 border-b border-sb-border/30">
-              {project.demoLink && (
-                <Button variant="sbFilled" size="lg" asChild>
-                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
-                  </a>
-                </Button>
-              )}
-              {project.githubLink1 && (
-                <Button variant="sbOutline" size="lg" asChild>
-                  <a href={project.githubLink1} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    Source Code
-                  </a>
-                </Button>
-              )}
-            </div>
-
-            {/* Technologies */}
-            <div className="mb-6">
-              <h3 className="text-xs font-bold uppercase tracking-widest text-sb-text-black-soft mb-3">Technologies:</h3>
-              <div className="flex flex-wrap gap-1.5">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-sb-cream text-sb-house rounded-full text-xs font-semibold border border-sb-border/50 shadow-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
+          {/* Project Meta Card (Technologies & Actions) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="bg-white rounded-3xl p-6 md:p-8 border border-sb-border/40 shadow-sb-card mb-8"
+          >
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              {/* Technologies */}
+              <div className="flex-1">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-sb-accent mb-3">
+                  Technologies
+                </h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-sb-cream text-sb-house rounded-full text-xs font-semibold border border-sb-border/50 shadow-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
+
+              {/* Action Buttons */}
+              {(project.demoLink || project.githubLink1) && (
+                <div className="flex flex-wrap items-center gap-3 shrink-0 pt-4 md:pt-0 border-t md:border-t-0 md:border-l border-sb-border/30 md:pl-6">
+                  {project.demoLink && (
+                    <Button variant="sbFilled" size="default" asChild>
+                      <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
+                  {project.githubLink1 && (
+                    <Button variant="sbOutline" size="default" asChild>
+                      <a href={project.githubLink1} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        Source Code
+                      </a>
+                    </Button>
+                  )}
+                </div>
+              )}
             </div>
           </motion.div>
 
@@ -105,19 +123,21 @@ const ProjectDetail = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-12 text-center"
+            className="mt-16 text-center"
           >
-            <Button 
-              variant="sbOutline" 
-              size="lg"
-              onClick={() => navigate(`/#project-${project.slug}`)}
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
-            </Button>
+            <Link to={`/#project-${project.slug}`}>
+              <Button 
+                variant="sbOutline" 
+                size="lg"
+                className="gap-2"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back to Home
+              </Button>
+            </Link>
           </motion.div>
         </div>
-      </section>
+      </div>
 
       {/* Mini Footer */}
       <footer className="bg-sb-house border-t border-sb-house/20 py-8 text-center text-xs text-sb-text-white-soft">
