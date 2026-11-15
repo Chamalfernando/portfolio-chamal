@@ -361,6 +361,118 @@ export const certificationCategories: CertificationCategory[] = [
     logo: "🪟",
     certifications: [
       {
+        name: "Introduction to retrieval-augmented generation concepts",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 15, 2026",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/rag-fundamentals/",
+        description: "Fundamentals of retrieval-augmented generation (RAG), covering grounding LLM responses in external data sources."
+      }
+      ,
+      {
+        name: "Introduction to .NET web development with ASP.NET Core",
+        institution: "Microsoft Learn",
+        issueDate: "Jul 13, 2026",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/introduction-to-aspnet-core/",
+        description: "Introduction to building web applications and APIs with ASP.NET Core, covering the request pipeline and project structure."
+      }
+      ,
+      {
+        name: "Create a new .NET project and work with dependencies",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 23, 2025",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/dotnet-dependencies/",
+        description: "Creating .NET projects with the CLI and managing NuGet package dependencies."
+      }
+      ,
+      {
+        name: "Introduction to .NET",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 23, 2025",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/dotnet-introduction/",
+        description: "Overview of the .NET platform, its runtimes, SDKs, and cross-platform application models."
+      }
+      ,
+      {
+        name: "Write your first C# code",
+        institution: "Microsoft Learn",
+        issueDate: "Jan 17, 2025",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/csharp-write-first/",
+        description: "Introduction to C# syntax, covering literals, variables, and console input and output."
+      }
+      ,
+      {
+        name: "Describe monitoring tools in Azure",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/",
+        description: "Azure monitoring and visualization tools including Azure Monitor, Log Analytics, and Service Health."
+      }
+      ,
+      {
+        name: "Describe features and tools for managing and deploying Azure resources",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/",
+        description: "Azure resource management and deployment tooling including the portal, CLI, PowerShell, and ARM templates."
+      }
+      ,
+      {
+        name: "Describe features and tools in Azure for governance and compliance",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/",
+        description: "Azure governance and compliance features including Azure Policy, resource locks, and Service Trust Portal."
+      }
+      ,
+      {
+        name: "Describe cost management in Azure",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/",
+        description: "Azure cost planning and control, covering the pricing calculator, Cost Management, and resource tagging."
+      }
+      ,
+      {
+        name: "Microsoft Cloud Adoption Framework for Azure",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/cloud-adoption-framework/",
+        description: "Guidance from the Cloud Adoption Framework for planning and executing a cloud adoption strategy on Azure."
+      }
+      ,
+      {
+        name: "Describe Azure identity, access, and security",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/",
+        description: "Azure identity and security concepts including Microsoft Entra ID, authentication, RBAC, and Zero Trust."
+      }
+      ,
+      {
+        name: "Describe Azure storage services",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/",
+        description: "Azure storage services covering blob, file, queue, and table storage, redundancy options, and data migration."
+      }
+      ,
+      {
+        name: "Describe Azure compute and networking services",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/",
+        description: "Azure compute and networking services including virtual machines, containers, Azure Functions, and virtual networks."
+      }
+      ,
+      {
+        name: "Describe the core architectural components of Azure",
+        institution: "Microsoft Learn",
+        issueDate: "May 19, 2024",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/",
+        description: "Core Azure architecture including regions, availability zones, resource groups, subscriptions, and management groups."
+      }
+      ,
+      {
         name: "Describe cloud service types",
         institution: "Microsoft Learn",
         issueDate: "Jan 19, 2024",
@@ -384,6 +496,125 @@ export const certificationCategories: CertificationCategory[] = [
         description: "Comprehensive course covering about cloud computing."
       }
       ,
+      {
+        name: "Using GitHub Copilot with Python",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 12, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/introduction-copilot-python/",
+        description: "Using GitHub Copilot to accelerate Python development with AI-assisted code suggestions."
+      }
+      ,
+      {
+        name: "Get started with Jupyter notebooks for Python",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 12, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-create-run-jupyter-notebook/",
+        description: "Working with Jupyter notebooks for interactive Python development and data exploration."
+      }
+      ,
+      {
+        name: "Python error handling",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 12, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-error-handling/",
+        description: "Handling errors in Python using exceptions, try/except blocks, and raising custom errors."
+      }
+      ,
+      {
+        name: "Python functions",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 12, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/functions-python/",
+        description: "Defining and calling Python functions, covering parameters, return values, and keyword arguments."
+      }
+      ,
+      {
+        name: "Manage data with Python dictionaries",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 12, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-dictionaries/",
+        description: "Storing and manipulating keyed data using Python dictionaries and dictionary methods."
+      }
+      ,
+      {
+        name: "Use 'while' and 'for' loops in Python",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 12, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-loops/",
+        description: "Controlling program flow with Python while and for loops and iteration patterns."
+      }
+      ,
+      {
+        name: "Introduction to lists in Python",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 12, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/intro-python-lists/",
+        description: "Working with Python lists, covering indexing, slicing, sorting, and list methods."
+      }
+      ,
+      {
+        name: "Use mathematical operations in Python",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 11, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-math-operators/",
+        description: "Performing mathematical operations in Python, covering operators, order of operations, and numeric types."
+      }
+      ,
+      {
+        name: "Use strings in Python",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 8, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-strings/",
+        description: "Manipulating text in Python with string methods, formatting, and escape sequences."
+      }
+      ,
+      {
+        name: "Use Boolean logic in Python",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 8, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-boolean-types/",
+        description: "Using Boolean expressions and logical operators to make decisions in Python code."
+      }
+      ,
+      {
+        name: "Create and manage projects in Python",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 8, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-create-manage-projects/",
+        description: "Structuring Python projects with modules, packages, and virtual environments."
+      }
+      ,
+      {
+        name: "Write your first Python programs",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 8, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-create-run-program/",
+        description: "Introduction to Python syntax, covering variables, output, and running your first programs."
+      }
+      ,
+      {
+        name: "Get started with Python in Visual Studio Code",
+        institution: "Microsoft Learn",
+        issueDate: "Nov 7, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-install-vscode/",
+        description: "Setting up and using Visual Studio Code as a Python development environment."
+      }
+      ,
+      {
+        name: "Introduction to GitHub Copilot",
+        institution: "Microsoft Learn",
+        issueDate: "Aug 3, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/",
+        description: "Overview of GitHub Copilot, covering AI pair programming, prompt crafting, and responsible use."
+      }
+      ,
+      {
+        name: "Get started with AI on Azure",
+        institution: "Microsoft Learn",
+        issueDate: "Aug 3, 2023",
+        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/",
+        description: "Introduction to artificial intelligence workloads on Azure, covering machine learning, computer vision, and NLP."
+      }
     ]
   }
 ];
