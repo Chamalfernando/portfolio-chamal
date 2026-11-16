@@ -364,7 +364,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Introduction to retrieval-augmented generation concepts",
         institution: "Microsoft Learn",
         issueDate: "Nov 15, 2026",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/rag-fundamentals/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/WQFY9W6N?sharingId=934856C92DA4A321",
         description: "Fundamentals of retrieval-augmented generation (RAG), covering grounding LLM responses in external data sources."
       }
       ,
@@ -372,7 +372,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Introduction to .NET web development with ASP.NET Core",
         institution: "Microsoft Learn",
         issueDate: "Jul 13, 2026",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/introduction-to-aspnet-core/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/9A2H2G9U?sharingId=934856C92DA4A321",
         description: "Introduction to building web applications and APIs with ASP.NET Core, covering the request pipeline and project structure."
       }
       ,
@@ -380,7 +380,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Create a new .NET project and work with dependencies",
         institution: "Microsoft Learn",
         issueDate: "Nov 23, 2025",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/dotnet-dependencies/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/9RYG83BU?sharingId=934856C92DA4A321",
         description: "Creating .NET projects with the CLI and managing NuGet package dependencies."
       }
       ,
@@ -388,7 +388,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Introduction to .NET",
         institution: "Microsoft Learn",
         issueDate: "Nov 23, 2025",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/dotnet-introduction/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/NMV38RYF?sharingId=934856C92DA4A321",
         description: "Overview of the .NET platform, its runtimes, SDKs, and cross-platform application models."
       }
       ,
@@ -396,7 +396,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Write your first C# code",
         institution: "Microsoft Learn",
         issueDate: "Jan 17, 2025",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/csharp-write-first/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/CFK4PQQ9?sharingId=934856C92DA4A321",
         description: "Introduction to C# syntax, covering literals, variables, and console input and output."
       }
       ,
@@ -404,7 +404,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Describe monitoring tools in Azure",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/NZP4AA2F?sharingId=934856C92DA4A321",
         description: "Azure monitoring and visualization tools including Azure Monitor, Log Analytics, and Service Health."
       }
       ,
@@ -412,7 +412,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Describe features and tools for managing and deploying Azure resources",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/UX2VNHJ3?sharingId=934856C92DA4A321",
         description: "Azure resource management and deployment tooling including the portal, CLI, PowerShell, and ARM templates."
       }
       ,
@@ -420,7 +420,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Describe features and tools in Azure for governance and compliance",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/KL3HTMDB?sharingId=934856C92DA4A321",
         description: "Azure governance and compliance features including Azure Policy, resource locks, and Service Trust Portal."
       }
       ,
@@ -428,7 +428,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Describe cost management in Azure",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/3YVMNJQH?sharingId=934856C92DA4A321",
         description: "Azure cost planning and control, covering the pricing calculator, Cost Management, and resource tagging."
       }
       ,
@@ -436,7 +436,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Microsoft Cloud Adoption Framework for Azure",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/cloud-adoption-framework/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/8AQEXKEW?sharingId=934856C92DA4A321",
         description: "Guidance from the Cloud Adoption Framework for planning and executing a cloud adoption strategy on Azure."
       }
       ,
@@ -444,7 +444,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Describe Azure identity, access, and security",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/XVKB7MGY?sharingId=934856C92DA4A321",
         description: "Azure identity and security concepts including Microsoft Entra ID, authentication, RBAC, and Zero Trust."
       }
       ,
@@ -452,7 +452,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Describe Azure storage services",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/ETC9BBDP?sharingId=934856C92DA4A321",
         description: "Azure storage services covering blob, file, queue, and table storage, redundancy options, and data migration."
       }
       ,
@@ -460,7 +460,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Describe Azure compute and networking services",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/NZP4YUNF?sharingId=934856C92DA4A321",
         description: "Azure compute and networking services including virtual machines, containers, Azure Functions, and virtual networks."
       }
       ,
@@ -468,7 +468,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Describe the core architectural components of Azure",
         institution: "Microsoft Learn",
         issueDate: "May 19, 2024",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/F24KRBAX?sharingId=934856C92DA4A321",
         description: "Core Azure architecture including regions, availability zones, resource groups, subscriptions, and management groups."
       }
       ,
@@ -500,7 +500,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Using GitHub Copilot with Python",
         institution: "Microsoft Learn",
         issueDate: "Nov 12, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/introduction-copilot-python/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/DG3EG4XJ?sharingId=934856C92DA4A321",
         description: "Using GitHub Copilot to accelerate Python development with AI-assisted code suggestions."
       }
       ,
@@ -508,7 +508,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Get started with Jupyter notebooks for Python",
         institution: "Microsoft Learn",
         issueDate: "Nov 12, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-create-run-jupyter-notebook/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/HY26YSN8?sharingId=934856C92DA4A321",
         description: "Working with Jupyter notebooks for interactive Python development and data exploration."
       }
       ,
@@ -516,7 +516,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Python error handling",
         institution: "Microsoft Learn",
         issueDate: "Nov 12, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-error-handling/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/8RVCY7BW?sharingId=934856C92DA4A321",
         description: "Handling errors in Python using exceptions, try/except blocks, and raising custom errors."
       }
       ,
@@ -524,7 +524,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Python functions",
         institution: "Microsoft Learn",
         issueDate: "Nov 12, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/functions-python/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/4SCVJ7NK?sharingId=934856C92DA4A321",
         description: "Defining and calling Python functions, covering parameters, return values, and keyword arguments."
       }
       ,
@@ -532,7 +532,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Manage data with Python dictionaries",
         institution: "Microsoft Learn",
         issueDate: "Nov 12, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-dictionaries/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/VKSRQ8SM?sharingId=934856C92DA4A321",
         description: "Storing and manipulating keyed data using Python dictionaries and dictionary methods."
       }
       ,
@@ -540,7 +540,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Use 'while' and 'for' loops in Python",
         institution: "Microsoft Learn",
         issueDate: "Nov 12, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-loops/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/3XZL3MPH?sharingId=934856C92DA4A321",
         description: "Controlling program flow with Python while and for loops and iteration patterns."
       }
       ,
@@ -548,7 +548,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Introduction to lists in Python",
         institution: "Microsoft Learn",
         issueDate: "Nov 12, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/intro-python-lists/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/CWRTCFY9?sharingId=934856C92DA4A321",
         description: "Working with Python lists, covering indexing, slicing, sorting, and list methods."
       }
       ,
@@ -556,7 +556,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Use mathematical operations in Python",
         institution: "Microsoft Learn",
         issueDate: "Nov 11, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-math-operators/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/K5925P8B?sharingId=934856C92DA4A321",
         description: "Performing mathematical operations in Python, covering operators, order of operations, and numeric types."
       }
       ,
@@ -564,7 +564,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Use strings in Python",
         institution: "Microsoft Learn",
         issueDate: "Nov 8, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-strings/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/QDLL7WFE?sharingId=934856C92DA4A321",
         description: "Manipulating text in Python with string methods, formatting, and escape sequences."
       }
       ,
@@ -572,7 +572,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Use Boolean logic in Python",
         institution: "Microsoft Learn",
         issueDate: "Nov 8, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-boolean-types/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/UF7A4QT3?sharingId=934856C92DA4A321",
         description: "Using Boolean expressions and logical operators to make decisions in Python code."
       }
       ,
@@ -580,7 +580,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Create and manage projects in Python",
         institution: "Microsoft Learn",
         issueDate: "Nov 8, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-create-manage-projects/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/3XZ7E82H?sharingId=934856C92DA4A321",
         description: "Structuring Python projects with modules, packages, and virtual environments."
       }
       ,
@@ -588,7 +588,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Write your first Python programs",
         institution: "Microsoft Learn",
         issueDate: "Nov 8, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-create-run-program/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/DG3U9LLJ?sharingId=934856C92DA4A321",
         description: "Introduction to Python syntax, covering variables, output, and running your first programs."
       }
       ,
@@ -596,7 +596,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Get started with Python in Visual Studio Code",
         institution: "Microsoft Learn",
         issueDate: "Nov 7, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/python-install-vscode/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/N7QMYMRF?sharingId=934856C92DA4A321",
         description: "Setting up and using Visual Studio Code as a Python development environment."
       }
       ,
@@ -604,7 +604,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Introduction to GitHub Copilot",
         institution: "Microsoft Learn",
         issueDate: "Aug 3, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/4DJFZU3K?sharingId=934856C92DA4A321",
         description: "Overview of GitHub Copilot, covering AI pair programming, prompt crafting, and responsible use."
       }
       ,
@@ -612,7 +612,7 @@ export const certificationCategories: CertificationCategory[] = [
         name: "Get started with AI on Azure",
         institution: "Microsoft Learn",
         issueDate: "Aug 3, 2023",
-        credentialUrl: "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/",
+        credentialUrl: "https://learn.microsoft.com/api/achievements/share/en-us/chamalferdy/NR9PXQNF?sharingId=934856C92DA4A321",
         description: "Introduction to artificial intelligence workloads on Azure, covering machine learning, computer vision, and NLP."
       }
     ]
