@@ -5,13 +5,14 @@ import { Button } from '@/components/ui/button';
 import { useMemo } from 'react';
 import type { CertificationCategory } from '@/data/portfolio';
 import certificationsData from '@/assets/certifications.json';
+import { isVisible } from '@/data/visibility';
 
 // Keep only certifications marked isVisible: "true", and drop institutions left with none
 const getVisibleCategories = (categories: CertificationCategory[]): CertificationCategory[] =>
   categories
     .map((category) => ({
       ...category,
-      certifications: category.certifications.filter((cert) => String(cert.isVisible).toLowerCase() === 'true'),
+      certifications: category.certifications.filter(isVisible),
     }))
     .filter((category) => category.certifications.length > 0);
 

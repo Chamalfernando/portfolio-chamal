@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { skills } from '@/data/portfolio';
+import { getVisibleSkills } from '@/data/skills';
 
 // Description map representing technologies with professional descriptions
 const skillMenuDescriptions: Record<string, { menuName: string; desc: string; level: string }> = {
@@ -35,6 +35,8 @@ const skillMenuDescriptions: Record<string, { menuName: string; desc: string; le
 };
 
 const Skills = () => {
+  // Loaded from src/assets/skills.json; only isVisible: "true" entries
+  const skills = useMemo(() => getVisibleSkills(), []);
   const categories = ['Frontend', 'Backend', 'Database', 'Tools'] as const;
   const [activeCategory, setActiveCategory] = useState<typeof categories[number]>('Frontend');
 

@@ -1,8 +1,11 @@
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar } from 'lucide-react';
-import { workExperiences } from '@/data/portfolio';
+import { getVisibleWorkExperiences } from '@/data/experience';
 
 const WorkExperience = () => {
+  // Loaded from src/assets/experience.json; only isVisible: "true" entries
+  const workExperiences = useMemo(() => getVisibleWorkExperiences(), []);
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">

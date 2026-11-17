@@ -1,12 +1,15 @@
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { workExperiences } from '@/data/portfolio';
+import { getVisibleWorkExperiences } from '@/data/experience';
 import workspace1 from '@/assets/workspace-1.jpg';
 import workspace2 from '@/assets/workspace-2.jpg';
 
 const WorkExperience = () => {
+  // Loaded from src/assets/experience.json; only isVisible: "true" entries
+  const workExperiences = useMemo(() => getVisibleWorkExperiences(), []);
   // Helper to map experiences to professional tags
   const getExperienceLevel = (title: string) => {
     if (title.toLowerCase().includes('associate')) {

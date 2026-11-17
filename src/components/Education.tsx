@@ -1,10 +1,13 @@
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { educations } from '@/data/portfolio';
+import { getVisibleEducations } from '@/data/education';
 import { Calendar, MapPin, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Education = () => {
+  // Loaded from src/assets/education.json; only isVisible: "true" entries
+  const educations = useMemo(() => getVisibleEducations(), []);
   return (
     <section id="education" className="py-20 bg-sb-gold-lightest border-t border-sb-border/40">
       <div className="container mx-auto px-6">

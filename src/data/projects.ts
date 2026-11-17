@@ -1,4 +1,5 @@
 import type { Project } from '@/data/portfolio';
+import { isVisible } from '@/data/visibility';
 import projectsData from '@/assets/projects.json';
 
 // Every image in src/assets, keyed by file name -> bundled URL.
@@ -20,7 +21,7 @@ const resolveImage = (name: string): string => {
 /** Projects from src/assets/projects.json that have isVisible: "true", with image names resolved to URLs. */
 export const getVisibleProjects = (): Project[] =>
   (projectsData as Project[])
-    .filter((project) => String(project.isVisible).toLowerCase() === 'true')
+    .filter(isVisible)
     .map((project) => ({
       ...project,
       image: resolveImage(project.image),

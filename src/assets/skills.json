@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Angular",
+    "category": "Frontend",
+    "icon": "🔺",
+    "isVisible": "true"
+  },
+  {
+    "name": "React",
+    "category": "Frontend",
+    "icon": "⚛️",
+    "isVisible": "false"
+  },
+  {
+    "name": "TypeScript",
+    "category": "Frontend",
+    "icon": "🔷",
+    "isVisible": "true"
+  },
+  {
+    "name": "JavaScript",
+    "category": "Frontend",
+    "icon": "🟨",
+    "isVisible": "true"
+  },
+  {
+    "name": "HTML5",
+    "category": "Frontend",
+    "icon": "🌐",
+    "isVisible": "true"
+  },
+  {
+    "name": "CSS3",
+    "category": "Frontend",
+    "icon": "🎨",
+    "isVisible": "true"
+  },
+  {
+    "name": "Bootstrap",
+    "category": "Frontend",
+    "icon": "🅱️",
+    "isVisible": "true"
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "icon": "💨",
+    "isVisible": "true"
+  },
+  {
+    "name": "ASP.NET Core",
+    "category": "Backend",
+    "icon": "🔵",
+    "isVisible": "true"
+  },
+  {
+    "name": "Node.js",
+    "category": "Backend",
+    "icon": "🟩",
+    "isVisible": "true"
+  },
+  {
+    "name": "Express.js",
+    "category": "Backend",
+    "icon": "⚡",
+    "isVisible": "true"
+  },
+  {
+    "name": "MS SQL Server",
+    "category": "Database",
+    "icon": "💾",
+    "isVisible": "true"
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "Database",
+    "icon": "🐘",
+    "isVisible": "false"
+  },
+  {
+    "name": "MySQL",
+    "category": "Database",
+    "icon": "🐬",
+    "isVisible": "true"
+  },
+  {
+    "name": "Firebase",
+    "category": "Database",
+    "icon": "🔥",
+    "isVisible": "false"
+  },
+  {
+    "name": "MongoDB",
+    "category": "Database",
+    "icon": "🍃",
+    "isVisible": "true"
+  },
+  {
+    "name": "Git",
+    "category": "Tools",
+    "icon": "🔀",
+    "isVisible": "true"
+  },
+  {
+    "name": "GitHub",
+    "category": "Tools",
+    "icon": "🐙",
+    "isVisible": "true"
+  },
+  {
+    "name": "Swagger Docs",
+    "category": "Tools",
+    "icon": "📋",
+    "isVisible": "true"
+  },
+  {
+    "name": "Scalar Docs",
+    "category": "Tools",
+    "icon": "📄",
+    "isVisible": "true"
+  },
+  {
+    "name": "Postman",
+    "category": "Tools",
+    "icon": "📮",
+    "isVisible": "true"
+  },
+  {
+    "name": "Docker",
+    "category": "Tools",
+    "icon": "🐳",
+    "isVisible": "true"
+  },
+  {
+    "name": "React Native",
+    "category": "Mobile",
+    "icon": "📱",
+    "isVisible": "true"
+  },
+  {
+    "name": "Flutter",
+    "category": "Mobile",
+    "icon": "🦋",
+    "isVisible": "true"
+  }
+]
