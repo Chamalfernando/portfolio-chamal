@@ -9,18 +9,25 @@ const Projects = () => {
   // Loaded from src/assets/projects.json; only isVisible: "true" entries
   const projects = useMemo(() => getVisibleProjects(), []);
 
-  // Helper to map project IDs to professional categories
-  const getProjectMetadata = (id: number) => {
-    switch (id) {
-      case 5: // eFinancials
+  // Helper to map project slugs to professional categories
+  // (keyed by slug, not id, so renumbering projects.json doesn't mismatch labels)
+  const getProjectMetadata = (slug: string) => {
+    switch (slug) {
+      case 'efinancials-central':
+        return { scale: 'Enterprise', tier: 'KYC & Onboarding', focus: 'Angular 20 & .NET' };
+      case 'efinancials':
         return { scale: 'Enterprise', tier: 'FinTech Solution', focus: 'Backend & DB' };
-      case 2: // KindCoin
+      case 'efinancials-aml':
+        return { scale: 'Enterprise', tier: 'AML Compliance', focus: 'T-SQL & Batch Jobs' };
+      case 'efinancials-workflow':
+        return { scale: 'Enterprise', tier: 'Workflow Engine', focus: 'Microfrontend' };
+      case 'kindcoin':
         return { scale: 'Full-Scale', tier: 'Web3 Donation', focus: 'MERN Stack' };
-      case 1: // Skillsparq
+      case 'skillsparq':
         return { scale: 'Full-Stack', tier: 'Freelancing Hub', focus: 'MySQL Backend' };
-      case 3: // BioMark
+      case 'biomark':
         return { scale: 'Mobile App', tier: 'Biometric System', focus: 'Flutter & Firebase' };
-      case 4: // Simple Ecommerce
+      case 'ecommerce':
         return { scale: 'Mobile App', tier: 'E-commerce App', focus: 'React Native' };
       default:
         return { scale: 'Full-Stack', tier: 'Utility System', focus: 'General Stack' };
@@ -51,7 +58,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => {
-            const meta = getProjectMetadata(project.id);
+            const meta = getProjectMetadata(project.slug);
             return (
               <motion.div
                 key={project.id}

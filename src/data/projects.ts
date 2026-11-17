@@ -18,10 +18,11 @@ const resolveImage = (name: string): string => {
   return url ?? '';
 };
 
-/** Projects from src/assets/projects.json that have isVisible: "true", with image names resolved to URLs. */
+/** Projects from src/assets/projects.json that have isVisible: "true", sorted by id (highest first), with image names resolved to URLs. */
 export const getVisibleProjects = (): Project[] =>
   (projectsData as Project[])
     .filter(isVisible)
+    .sort((a, b) => b.id - a.id)
     .map((project) => ({
       ...project,
       image: resolveImage(project.image),

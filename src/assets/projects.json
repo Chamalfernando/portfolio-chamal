@@ -1,10 +1,66 @@
 [
   {
+    "id": 8,
+    "slug": "efinancials-aml",
+    "title": "eFinancials AML (Anti-Money Laundering)",
+    "description": "Anti-money laundering rules and batch detection pipeline for banking and finance clients.",
+    "image": "project-aml.jpeg",
+    "technologies": [
+      "Angular 10",
+      ".NET",
+      "MS SQL Server",
+      "T-SQL",
+      "SQL Server Agent"
+    ],
+    "details": "Anti-money laundering module of the eFinancials system that consolidates transactions from the Savings, Fixed Deposit, Leasing, and Pawning modules and runs detection rules against them to flag suspicious activity for banking and finance clients.",
+    "longDescription": "June 2025 – Present\n\n• Created AML business rules that detect suspicious transactions for banking and finance clients\n• Maintained the AML batch pipeline that consolidates transactions from the Savings, Fixed Deposit, Leasing, and Pawning modules through T-SQL stored procedures and runs detection rules against them using SQL Server Agent jobs\n• Diagnosed alert-timing defects in rule lookback windows, fixed logic errors in detection rules, and rewrote the underlying queries for better performance\n• Debugged and stabilized the ASP.NET Core AML backend APIs, resolving routing conflicts, route template bugs, and build failures after a source control migration\n• Handled live client issues and prepared deliverables for deployments across environments",
+    "demoLink": "",
+    "githubLink1": "",
+    "isVisible": "true"
+  },
+  {
+    "id": 7,
+    "slug": "efinancials-workflow",
+    "title": "eFinancials Workflow Management",
+    "description": "Shared microfrontend for configurable, multi-level approval workflows.",
+    "image": "project-workflow.jpeg",
+    "technologies": [
+      "Angular 19",
+      ".NET",
+      "MS SQL Server",
+      "Microfrontends",
+      "RESTful APIs"
+    ],
+    "details": "Shared workflow microfrontend reused across modules of the eFinancials system, enabling modules to run dynamic, configurable workflows with multi-level approvals for their business processes.",
+    "longDescription": "June 2025 – Present\n\n• Configured and maintained a shared microfrontend reused across modules in the eFinancials system, enabling additional modules to run workflows for their business processes\n• Created and modified 5+ RESTful APIs and 5+ reusable Angular components to support dynamic, configurable workflow processes\n• Implemented user access handling for multi-level approval workflows and owned the build and maintenance of the module's frontend components",
+    "demoLink": "",
+    "githubLink1": "",
+    "isVisible": "true"
+  },
+  {
+    "id": 6,
+    "slug": "efinancials-central",
+    "title": "eFinancials Central",
+    "description": "Business partner onboarding and KYC customer management module.",
+    "image": "project-central.jpeg",
+    "technologies": [
+      "Angular 20",
+      ".NET",
+      "MS SQL Server",
+      "IIS"
+    ],
+    "details": "Core business module of the eFinancials system that streamlines business partner onboarding, with secure KYC management of customer personal information, contact data, and risk profiling, plus role management and audit trails.",
+    "longDescription": "June 2025 – Dec 2025\n\n• Developed a core business module of the eFinancials system to streamline the business partner onboarding process, enabling secure management of customer details (KYC) including personal information, contact data, and risk profiling\n• Delivered key functionality covering user role management, audit trails, category updates, and customer inquiry and maintenance operations\n• Responsible for building scalable frontend components, integrating backend APIs, and ensuring data accuracy and security across modules",
+    "demoLink": "",
+    "githubLink1": "",
+    "isVisible": "true"
+  },
+  {
     "id": 5,
     "slug": "efinancials",
     "title": "eFinancials Fixed Deposit System",
     "description": "Enterprise financial management system for fixed deposits.",
-    "image": "project-efinancials.jpg",
+    "image": "project-fixeddeposit.jpeg",
     "technologies": [
       "Angular 19",
       "ASP .NET Core",
@@ -15,6 +71,38 @@
     "details": "Enterprise-grade financial management system for handling fixed deposit operations. Features include customer management, interest calculations, automated reporting, and comprehensive audit trails.",
     "demoLink": "",
     "githubLink1": "",
+    "isVisible": "true"
+  },
+  {
+    "id": 4,
+    "slug": "ecommerce",
+    "title": "Simple Ecommerce Mobile Application",
+    "description": "Modern Looking Ecommerce Mobile Application",
+    "image": "project-ecommerce.jpg",
+    "technologies": [
+      "React Native"
+    ],
+    "details": "Modern e-commerce mobile application with intuitive user interface, state management using Redux, product catalog browsing, shopping cart functionality, and seamless checkout process.",
+    "demoLink": "",
+    "githubLink1": "https://github.com/Chamalfernando/ReactNative_Assessment",
+    "isVisible": "true"
+  },
+  {
+    "id": 3,
+    "slug": "biomark",
+    "title": "BioMark Mobile Application",
+    "description": "Biometric attendance tracking mobile application.",
+    "image": "project-biomark.jpg",
+    "technologies": [
+      "Flutter",
+      "Firebase",
+      "FireStore",
+      "Express.js"
+    ],
+    "details": "Cross-platform mobile application implementing biometric authentication for attendance tracking. Features real-time synchronization, offline capabilities, advanced analytics, and secure data encryption.",
+    "demoLink": "https://youtu.be/M_IHaXyjdrg",
+    "githubLink1": "https://github.com/Chamalfernando/Biomark_Frontend",
+    "githubLink2": "https://github.com/Chamalfernando/Biomark_Backend",
     "isVisible": "true"
   },
   {
@@ -57,38 +145,6 @@
     "details": "A comprehensive freelancing platform featuring user authentication, real-time messaging system, secure payment processing, and advanced search functionality. Built with responsive design principles and optimized for performance across all devices.",
     "demoLink": "",
     "githubLink1": "https://github.com/sahan462/Skillsparq",
-    "isVisible": "true"
-  },
-  {
-    "id": 3,
-    "slug": "biomark",
-    "title": "BioMark Mobile Application",
-    "description": "Biometric attendance tracking mobile application.",
-    "image": "project-biomark.jpg",
-    "technologies": [
-      "Flutter",
-      "Firebase",
-      "FireStore",
-      "Express.js"
-    ],
-    "details": "Cross-platform mobile application implementing biometric authentication for attendance tracking. Features real-time synchronization, offline capabilities, advanced analytics, and secure data encryption.",
-    "demoLink": "https://youtu.be/M_IHaXyjdrg",
-    "githubLink1": "https://github.com/Chamalfernando/Biomark_Frontend",
-    "githubLink2": "https://github.com/Chamalfernando/Biomark_Backend",
-    "isVisible": "true"
-  },
-  {
-    "id": 4,
-    "slug": "ecommerce",
-    "title": "Simple Ecommerce Mobile Application",
-    "description": "Modern Looking Ecommerce Mobile Application",
-    "image": "project-ecommerce.jpg",
-    "technologies": [
-      "React Native"
-    ],
-    "details": "Modern e-commerce mobile application with intuitive user interface, state management using Redux, product catalog browsing, shopping cart functionality, and seamless checkout process.",
-    "demoLink": "",
-    "githubLink1": "https://github.com/Chamalfernando/ReactNative_Assessment",
     "isVisible": "true"
   }
 ]

@@ -21,7 +21,9 @@
       "Bootstrap",
       "Git",
       "Swagger",
-      "Native Federation"
+      "Native Federation",
+      "SSRS",
+      "Microsoft Report Builder Tool"
     ],
     "isVisible": "true"
   },
