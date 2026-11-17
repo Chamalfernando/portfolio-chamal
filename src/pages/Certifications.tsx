@@ -2,9 +2,25 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Calendar, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { certificationCategories } from '@/data/portfolio';
+import { useMemo } from 'react';
+import type { CertificationCategory } from '@/data/portfolio';
+import certificationsData from '@/assets/certifications.json';
+
+// Keep only certifications marked isVisible: "true", and drop institutions left with none
+const getVisibleCategories = (categories: CertificationCategory[]): CertificationCategory[] =>
+  categories
+    .map((category) => ({
+      ...category,
+      certifications: category.certifications.filter((cert) => String(cert.isVisible).toLowerCase() === 'true'),
+    }))
+    .filter((category) => category.certifications.length > 0);
 
 const Certifications = () => {
+  const certificationCategories = useMemo(
+    () => getVisibleCategories(certificationsData as CertificationCategory[]),
+    []
+  );
+
   // Total counts
   const totalCerts = certificationCategories.reduce((acc, cat) => acc + cat.certifications.length, 0);
   const totalInstitutions = certificationCategories.length;

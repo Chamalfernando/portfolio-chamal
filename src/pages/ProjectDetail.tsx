@@ -1,14 +1,16 @@
+import { useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
-import { projects } from '@/data/portfolio';
+import { getVisibleProjects } from '@/data/projects';
 import ProjectDetailContent from '@/components/projects/ProjectDetailContent';
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const project = projects.find(p => p.slug === slug);
+  // Hidden projects (isVisible: "false") fall through to the not-found view
+  const project = useMemo(() => getVisibleProjects().find(p => p.slug === slug), [slug]);
 
   if (!project) {
     return (

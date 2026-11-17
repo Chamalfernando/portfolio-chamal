@@ -1,10 +1,14 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { projects } from '@/data/portfolio';
+import { useMemo } from 'react';
+import { getVisibleProjects } from '@/data/projects';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 
 const Projects = () => {
+  // Loaded from src/assets/projects.json; only isVisible: "true" entries
+  const projects = useMemo(() => getVisibleProjects(), []);
+
   // Helper to map project IDs to professional categories
   const getProjectMetadata = (id: number) => {
     switch (id) {
