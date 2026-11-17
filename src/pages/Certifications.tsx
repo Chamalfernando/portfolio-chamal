@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Calendar, Award } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, Award, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import ScrollToTop from '@/components/ScrollToTop';
 import { useMemo } from 'react';
 import type { CertificationCategory } from '@/data/portfolio';
 import certificationsData from '@/assets/certifications.json';
@@ -73,22 +75,36 @@ const Certifications = () => {
           {certificationCategories.map((category, categoryIndex) => {
             const cardTheme = cardGradients[category.institution] || "from-sb-green to-sb-accent";
             
+            const count = category.certifications.length;
+
             return (
-              <div key={category.institution} className="space-y-6">
-                
-                {/* Category Header */}
-                <div className="border-b border-sb-border/30 pb-3 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">{category.logo}</span>
-                    <h3 className="text-2xl font-serif font-bold text-sb-house">{category.institution}</h3>
-                  </div>
-                  <span className="text-xs font-bold bg-sb-light text-sb-accent px-3 py-1 rounded-full border border-sb-accent/15">
-                    {category.certifications.length} Course{category.certifications.length > 1 ? 's' : ''}
-                  </span>
-                </div>
+              <Collapsible key={category.institution} defaultOpen className="group/institution">
+
+                {/* Category Header: collapsible bar */}
+                <CollapsibleTrigger asChild>
+                  <button
+                    type="button"
+                    className="w-full border-b border-sb-border/30 pb-3 flex items-center justify-between gap-3 text-left rounded-t-xl hover:border-sb-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sb-accent/40 transition-colors"
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <span className="text-3xl">{category.logo}</span>
+                      <h3 className="text-2xl font-serif font-bold text-sb-house truncate">{category.institution}</h3>
+                    </div>
+                    <div className="flex items-center gap-3 shrink-0">
+                      <span className="text-xs font-bold bg-sb-light text-sb-accent px-3 py-1 rounded-full border border-sb-accent/15">
+                        {count} Certification{count === 1 ? '' : 's'}
+                      </span>
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full border border-sb-border/50 bg-white text-sb-house group-hover/institution:border-sb-accent/40">
+                        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-data-[state=open]/institution:rotate-180" />
+                        <span className="sr-only">Toggle {category.institution} certifications</span>
+                      </span>
+                    </div>
+                  </button>
+                </CollapsibleTrigger>
 
                 {/* Certificates Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
                   {category.certifications.map((cert, certIndex) => (
                     <motion.div
                       key={certIndex}
@@ -147,8 +163,9 @@ const Certifications = () => {
                     </motion.div>
                   ))}
                 </div>
+                </CollapsibleContent>
 
-              </div>
+              </Collapsible>
             );
           })}
         </div>
@@ -204,6 +221,8 @@ const Certifications = () => {
           <p>© {new Date().getFullYear()} Chamal Fernando. All rights reserved.</p>
         </div>
       </footer>
+
+      <ScrollToTop />
     </main>
   );
 };
