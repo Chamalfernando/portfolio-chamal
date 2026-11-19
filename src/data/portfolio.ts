@@ -56,6 +56,8 @@ export interface Certification {
 }
 
 export interface CertificationCategory {
+  /** Display position on the Certifications page (ascending: 1 shows first) */
+  orderNo: number;
   institution: string;
   logo: string;
   certifications: Certification[];

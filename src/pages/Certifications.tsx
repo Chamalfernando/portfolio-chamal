@@ -9,14 +9,16 @@ import type { CertificationCategory } from '@/data/portfolio';
 import certificationsData from '@/assets/certifications.json';
 import { isVisible } from '@/data/visibility';
 
-// Keep only certifications marked isVisible: "true", and drop institutions left with none
+// Keep only certifications marked isVisible: "true", drop institutions left with none,
+// and order institutions by orderNo (ascending)
 const getVisibleCategories = (categories: CertificationCategory[]): CertificationCategory[] =>
   categories
     .map((category) => ({
       ...category,
       certifications: category.certifications.filter(isVisible),
     }))
-    .filter((category) => category.certifications.length > 0);
+    .filter((category) => category.certifications.length > 0)
+    .sort((a, b) => a.orderNo - b.orderNo);
 
 const Certifications = () => {
   const certificationCategories = useMemo(
