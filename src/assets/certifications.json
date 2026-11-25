@@ -88,6 +88,45 @@
   },
   {
     "orderNo": 2,
+    "institution": "Anthropic",
+    "logo": "🤖",
+    "certifications": [
+      {
+        "name": "Introduction to agent skills",
+        "institution": "Anthropic Education",
+        "issueDate": "Nov 22, 2026",
+        "credentialUrl": "https://verify.skilljar.com/c/8h33noqywwy8",
+        "description": "Introductory course on agent skills in Claude Code, covering how to create, configure, and share reusable skills.",
+        "isVisible": "true"
+      },
+      {
+        "name": "Claude Code in Action",
+        "institution": "Anthropic Education",
+        "issueDate": "Nov 22, 2026",
+        "credentialUrl": "https://verify.skilljar.com/c/ycg96km4pzkd",
+        "description": "Practical course on integrating Claude Code, Anthropic's agentic coding tool, into software development workflows.",
+        "isVisible": "true"
+      },
+      {
+        "name": "Introduction to subagents",
+        "institution": "Anthropic Education",
+        "issueDate": "Aug 16, 2026",
+        "credentialUrl": "https://verify.skilljar.com/c/26bgxybs3qrr",
+        "description": "Introductory course on subagents in Claude Code, covering task delegation, context management, and custom subagent creation.",
+        "isVisible": "true"
+      },
+      {
+        "name": "Claude Code 101",
+        "institution": "Anthropic Education",
+        "issueDate": "Aug 15, 2026",
+        "credentialUrl": "https://verify.skilljar.com/c/g6dduoa6rv79",
+        "description": "Introductory course on using Claude Code, Anthropic's agentic coding tool, in everyday software development workflows.",
+        "isVisible": "true"
+      }
+    ]
+  },
+  {
+    "orderNo": 4,
     "institution": "Udemy",
     "logo": "📚",
     "certifications": [
@@ -110,7 +149,7 @@
     ]
   },
   {
-    "orderNo": 3,
+    "orderNo": 5,
     "institution": "Coursera",
     "logo": "🎓",
     "certifications": [
@@ -149,7 +188,7 @@
     ]
   },
   {
-    "orderNo": 4,
+    "orderNo": 3,
     "institution": "Microsoft Learn",
     "logo": "🪟",
     "certifications": [
